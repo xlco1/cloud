@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite1" >
+ <parameter name="env" value="qa"/>
+  <test name="testinqa">
+        <classes>
+       <class name="clo.AddaNewReturn"/>
+     <!-- <class name="clo.AddaNewPreparer"/> -->
+    </classes>
+  </test> 
+   <parameter name="env" value="dev"/>
+   <test  name="testindev">
+       <classes>
+      <class name="clo.AddaNewReturn"/>
+     </classes>
+  </test> 
+</suite>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1]">
+  <parameter name="env" value="dev"/>
+  <test name="testinqa(failed)">
+    <classes>
+      <class name="clo.AddaNewReturn">
+        <methods>
+          <include name="login"/>
+          <include name="login"/>
+          <include name="addareturn"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- clo.AddaNewReturn -->
+    </classes>
+  </test> <!-- testinqa(failed) -->
+  <test name="testindev(failed)">
+    <classes>
+      <class name="clo.AddaNewReturn">
+        <methods>
+          <include name="login"/>
+          <include name="login"/>
+          <include name="addareturn"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- clo.AddaNewReturn -->
+    </classes>
+  </test> <!-- testindev(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
