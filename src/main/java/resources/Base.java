@@ -54,7 +54,8 @@ public class Base {
 		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 		driver=new ChromeDriver(capabilities);
 		prop = new Properties();
-		FileInputStream fs=new FileInputStream("C:\\Users\\ssreenivasan\\eclipse-workspace1\\Cloud-testing\\src\\main\\java\\resources\\data.properties");
+		FileInputStream fs=new FileInputStream(projectPath +"/src/main/java/resources/data.properties");
+				//"C:\\Users\\ssreenivasan\\eclipse-workspace1\\Cloud-testing\\src\\main\\java\\resources\\data.properties");
 		prop.load(fs);
 		report = new ExtentReports(System.getProperty("user.dir") + "./reports/testExecutionReport.html",true);
 				//new ExtentReports("AddareturnReport.html",true);//where to save the report//H:\\CLO\\
