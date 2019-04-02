@@ -19,7 +19,7 @@ public class LoginClo extends Base {
 	
 	
 
-	
+	@Test
 	public WebDriver openHomePage() throws IOException
 	{
 		invokeBrowser();

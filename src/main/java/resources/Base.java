@@ -44,7 +44,8 @@ public class Base {
 	public WebDriver invokeBrowser() throws IOException
 	{
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ssreenivasan\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		String projectPath = System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", projectPath +"/driver/chromedriver.exe");
 		//to open incognito mode
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--incognito");

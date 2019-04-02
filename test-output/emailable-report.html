@@ -31,79 +31,10 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">testinqa</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">10.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-<tr class="stripe"><td style="text-align:left;padding-right:2em">testindev</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0</td><td class="numi">7.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-<tr class="total"><td>Total</td>
-<td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi_attn">1</td><td class="numi">18.8 seconds</td><td colspan="2">&nbsp;</td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">testinqa &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">clo.AddaNewReturn</td><td><a href="#m1"><b>addareturn</b>  </a></td><td class="numi">1</td><td>1554140272387</td><td class="numi">191</td></tr>
-<tr><th colspan="4">testindev &#8212; failed (configuration methods)</th></tr>
-<tr class="failedodd"><td rowspan="1">clo.AddaNewReturn</td><td><a href="#m2"><b>login</b>  </a></td><td class="numi">1</td><td>1554140272992</td><td class="numi">0</td></tr>
-<tr><th colspan="4">testindev &#8212; skipped (configuration methods)</th></tr>
-<tr class="skippedodd"><td rowspan="1">clo.AddaNewReturn</td><td><a href="#m3"><b>teardown</b>  </a></td><td class="numi">1</td><td>1554140280933</td><td class="numi">0</td></tr>
-<tr><th colspan="4">testindev &#8212; skipped</th></tr>
-<tr class="skippedodd"><td rowspan="1">clo.AddaNewReturn</td><td><a href="#m4"><b>addareturn</b>  </a></td><td class="numi">1</td><td>1554140280924</td><td class="numi">6</td></tr>
 </table>
-<h1>testinqa</h1>
-<h2 id="m1">clo.AddaNewReturn:addareturn</h2>
-<div style="padding-left:3em">
-<p>unknown error: Element &lt;span id=&quot;spnTitleTab2&quot; class=&quot;noselect tab tab-blur&quot;&gt;...&lt;/span&gt; is not clickable at point (496, 42). Other element would receive the click: &lt;div class=&quot;jss367&quot; aria-hidden=&quot;true&quot; style=&quot;opacity: 1; will-change: opacity; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;&quot;&gt;&lt;/div&gt;
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 138 milliseconds
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;qaint&apos;, ip: &apos;89.0.1.156&apos;, os.name: &apos;Windows Server 2012&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9), userDataDir=C:\Users\SSREEN~1\AppData\Local\Temp\2\scoped_dir4240_13931}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=73.0.3683.86, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 5fcf67de44f1859578770d75534b71ce</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
-<br/>at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-<br/>at clo.AddaNewReturn.addareturn(AddaNewReturn.java:50)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h1>testindev</h1>
-<h2 id="m2">clo.AddaNewReturn:login</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th></tr>
-<tr class="param stripe"><td>dev</td>
-</tr>
-<tr><td style="padding-left:3em" colspan="1">
-<p>unknown error: Element &lt;button class=&quot;jss408 jss382 jss384 jss387&quot; tabindex=&quot;0&quot; type=&quot;button&quot; id=&quot;btnStartTour&quot; style=&quot;width: 10vw; min-height: 3.5vh; text-transform: capitalize; font-family: Roboto; font-size: 14px; border-radius: 4px; margin-right: 1.5vw; padding: 0px;&quot;&gt;...&lt;/button&gt; is not clickable at point (646, 492). Other element would receive the click: &lt;form style=&quot;margin-left: 3vw; margin-right: 3vw; margin-top: 1vh;&quot;&gt;...&lt;/form&gt;
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 156 milliseconds
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;qaint&apos;, ip: &apos;89.0.1.156&apos;, os.name: &apos;Windows Server 2012&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9), userDataDir=C:\Users\SSREEN~1\AppData\Local\Temp\2\scoped_dir4936_13947}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=73.0.3683.86, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 2dfeec8d715ecfeed7bb9fc175dd1c45</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
-<br/>at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-<br/>at clo.AddaNewReturn.login(AddaNewReturn.java:200)
-<br/>23 lines not shown
-</td></tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">clo.AddaNewReturn:teardown</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">clo.AddaNewReturn:addareturn</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Default test</h1>
 </body></html>
