@@ -89,8 +89,8 @@ public void forgotPassword() throws IOException, InterruptedException
 	System.out.println("forgot password passed");
 	driver.quit();
 	}
-	
+	*/
 	
 }
 	
-*/	
+
