@@ -17,7 +17,7 @@ public class OverviewpgPO {
 	public OverviewpgPO(WebDriver driver) {
 		this.driver=driver;
 	}
-	
+	By overviewtab = By.id("spnTitleTab0");
 	By officestab = By.id("spnTitleTab2");
 	By viewbtn = By.xpath("//button[@id='btnViewOfficeList3']");
 	By preparersbtn = By.xpath("//div/span[@id='spnTitleTab1']");
@@ -33,6 +33,10 @@ public class OverviewpgPO {
 	By onetaxretrn = By.id("btnOpenTaxReturnTRList9");
 	By continueinataxrtn = By.id("btnContinueReturnProfile");
 	//-------------------------------
+	public WebElement clickoverview()
+	{
+		return driver.findElement(overviewtab);
+	}
 	public WebElement clickoffices()
 	{
 		return driver.findElement(officestab);
