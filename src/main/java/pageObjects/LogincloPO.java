@@ -29,9 +29,9 @@ public class LogincloPO {
 	By thrdcontbtn = By.id("btnContinueMFACODE");
 	By contbtnIRS = By.id("btnContinueIRSMessage");
 	By canceltour = By.id("btnStartTour");
-	By forgotpasswordbtn = By.id("divForgotPassLogin");//added 4/9
-	By sendcodebtn = By.id("btnSendCodeFP");//added 4/9
-	By fpusername = By.id("txtUsernameFP");//added 4/9 - username field for forgot password
+	By forgotpasswordbtn = By.id("divForgotPassLogin");//Forgot password link
+	By sendcodebtn = By.id("btnSendCodeFP");//Send code in forgot password dialog
+	By fpusername = By.id("txtUsernameFP");// username field for forgot password dialog
 	
 	public WebElement getusername()
 	{
@@ -74,7 +74,7 @@ public class LogincloPO {
 		return driver.findElement(sendcodebtn);
 	}
 	
-	public WebElement getfpusername()
+	public WebElement clickfpusername()
 	{
 		return driver.findElement(fpusername);
 	}
