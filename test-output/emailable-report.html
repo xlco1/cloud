@@ -8,6 +8,7 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<<<<<<< HEAD
 <tr><th colspan="7">Default suite</th></tr>
 <tr><td><a href="#t0">Default test</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num">49,135</td><td></td><td></td></tr>
 </table>
@@ -21,5 +22,49 @@
 <h3 id="m5">clo.LoginPage#newMessageReply</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m6">clo.LoginPage#newMessageSent</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m7">clo.LoginPage#updateAppointment</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+=======
+<tr><th colspan="7">Suite1</th></tr>
+<tr><td><a href="#t0">testinqa</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">15,325</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">testindev</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">8,813</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num attn">1</th><th class="num">0</th><th class="num">24,138</th><th colspan="2"></th></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite1</th></tr></tbody><tbody id="t0"><tr><th colspan="4">testinqa &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">clo.AddaNewReturn</td><td><a href="#m0">addareturn</a></td><td rowspan="1">1554830031206</td><td rowspan="1">1082</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">testindev &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">clo.AddaNewReturn</td><td><a href="#m1">login</a></td><td rowspan="1">1554830035028</td><td rowspan="1">8778</td></tr><tr><th colspan="4">testindev &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">clo.AddaNewReturn</td><td><a href="#m2">teardown</a></td><td rowspan="1">1554830043838</td><td rowspan="1">0</td></tr><tr><th colspan="4">testindev &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">clo.AddaNewReturn</td><td><a href="#m3">addareturn</a></td><td rowspan="1">1554830043831</td><td rowspan="1">0</td></tr></tbody>
+</table>
+<h2>testinqa</h2><h3 id="m0">clo.AddaNewReturn#addareturn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>testindev</h2><h3 id="m1">clo.AddaNewReturn#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>dev</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;button class=&quot;jss408 jss382 jss384 jss387&quot; tabindex=&quot;0&quot; type=&quot;button&quot; id=&quot;btnStartTour&quot; style=&quot;width: 10vw; min-height: 3.5vh; text-transform: capitalize; font-family: Roboto; font-size: 14px; border-radius: 4px; margin-right: 1.5vw; padding: 0px;&quot;&gt;...&lt;/button&gt; is not clickable at point (646, 492). Other element would receive the click: &lt;form style=&quot;margin-left: 3vw; margin-right: 3vw; margin-top: 1vh;&quot;&gt;...&lt;/form&gt;
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 212 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;qaint&apos;, ip: &apos;89.0.1.156&apos;, os.name: &apos;Windows Server 2012&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9), userDataDir=C:\Users\SSREEN~1\AppData\Local\Temp\2\scoped_dir11324_21635}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=73.0.3683.86, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a40f21fc70328ee1cf74cf1c934e251b
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at clo.AddaNewReturn.login(AddaNewReturn.java:200)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">clo.AddaNewReturn#teardown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">clo.AddaNewReturn#addareturn</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;button class=&quot;jss408 jss382 jss384 jss387&quot; tabindex=&quot;0&quot; type=&quot;button&quot; id=&quot;btnStartTour&quot; style=&quot;width: 10vw; min-height: 3.5vh; text-transform: capitalize; font-family: Roboto; font-size: 14px; border-radius: 4px; margin-right: 1.5vw; padding: 0px;&quot;&gt;...&lt;/button&gt; is not clickable at point (646, 492). Other element would receive the click: &lt;form style=&quot;margin-left: 3vw; margin-right: 3vw; margin-top: 1vh;&quot;&gt;...&lt;/form&gt;
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 212 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;qaint&apos;, ip: &apos;89.0.1.156&apos;, os.name: &apos;Windows Server 2012&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9), userDataDir=C:\Users\SSREEN~1\AppData\Local\Temp\2\scoped_dir11324_21635}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=73.0.3683.86, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a40f21fc70328ee1cf74cf1c934e251b
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at clo.AddaNewReturn.login(AddaNewReturn.java:200)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+>>>>>>> 858cbda532beba182f353a51fc22382ced550cfd
 </body>
 </html>

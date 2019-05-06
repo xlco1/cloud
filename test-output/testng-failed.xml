@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <test thread-count="5" name="testindev(failed)">
+    <parameter name="env" value="dev"/>
     <classes>
-      <class name="clo.LoginPage">
+      <class name="clo.AddaNewReturn">
         <methods>
+<<<<<<< HEAD
           <include name="deleteMessage"/>
           <include name="deleteAppointment"/>
           <include name="newMessageReply"/>
           <include name="newMessageSent"/>
+=======
+          <include name="login"/>
+          <include name="addareturn"/>
+          <include name="teardown"/>
+>>>>>>> 858cbda532beba182f353a51fc22382ced550cfd
         </methods>
-      </class> <!-- clo.LoginPage -->
+      </class> <!-- clo.AddaNewReturn -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- testindev(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
