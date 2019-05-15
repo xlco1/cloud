@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <test thread-count="5" name="testinqa(failed)">
+    <parameter name="env" value="qa"/>
+    <classes>
+      <class name="clo.AddaNewReturn">
+        <methods>
+          <include name="login"/>
+          <include name="addareturn"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- clo.AddaNewReturn -->
+    </classes>
+  </test> <!-- testinqa(failed) -->
   <test thread-count="5" name="testindev(failed)">
     <parameter name="env" value="dev"/>
     <classes>

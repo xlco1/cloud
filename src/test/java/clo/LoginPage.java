@@ -207,9 +207,8 @@ public void addPreparerPositive() throws IOException
 		System.out.println("Create new appointment passed");
 		op.clickapptcreatedclsoebtn().click();
 		Thread.sleep(1000);
-=======
-	*/
->>>>>>> 858cbda532beba182f353a51fc22382ced550cfd
+
+
 	
 	}
 	
@@ -329,7 +328,7 @@ public void addPreparerPositive() throws IOException
 		System.out.println("Delete Message Passed");
 	}
 	
-<<<<<<< HEAD
+
 	
 	/*
 	@Test(priority = 11)
@@ -370,6 +369,4 @@ public void addPreparerPositive() throws IOException
 
 
 
-=======
->>>>>>> 858cbda532beba182f353a51fc22382ced550cfd
 
