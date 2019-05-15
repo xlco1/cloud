@@ -5,10 +5,7 @@
     <classes>
       <class name="clo.LoginPage">
         <methods>
-          <include name="deleteMessage"/>
-          <include name="deleteAppointment"/>
-          <include name="newMessageReply"/>
-          <include name="newMessageSent"/>
+          <include name="deleteSecondAppointment"/>
         </methods>
       </class> <!-- clo.LoginPage -->
     </classes>

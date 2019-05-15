@@ -8,6 +8,12 @@
           <include name="createNewAppointment"/>
           <include name="deleteMessage"/>
           <include name="deleteAppointment"/>
+<<<<<<< HEAD
+=======
+          <include name="checksReadyToPrint"/>
+          <include name="voidCheck"/>
+          <include name="checksRegister"/>
+>>>>>>> b55248094518fde647269a5101baea65bb3377d3
           <include name="createApptSameTime"/>
           <include name="newMessageReply"/>
           <include name="updateAppointment"/>
