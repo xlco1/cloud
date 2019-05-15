@@ -83,13 +83,15 @@ public class OverviewpgPO {
 	By chksprintbtn = By.xpath("//span[text() = 'Print']");//Print btn in the checks ready
 	By chksprintcheckscancelbtn = By.xpath("//span[text() = 'Cancel']");//Cancel btn in Print checks pop up
 	By chksprintchecksokbtn = By.xpath("//span[text()= 'Ok']");// OK btn in print checks pop up
-	By chksprintchecksdialog = By.xpath("/html/body/div[9]/div[2]/div/div[1]/h6");//Print Checks(text) pop up 
+	By chksprintchecksdialog = By.xpath("//h2[text()= 'Print Checks']");//Print Checks(text) from pop up 
+	By chksreprintchecksdialog = By.xpath("//h2[text()= 'Check Reprint']");// Check Reprint(text) from pop up
 	By chksselectallchkbox = By.xpath("//input[@type ='checkbox']");//select all check box
 	By chkscheckregistertab = By.id("spnTitleTab1");// check Register tab
 	//By chkschkregfirstchkbox = By.xpath(("//input[@type = 'Checkbox']")[1]);//first checkbox in checks register
 	By chksreprintbtn = By.xpath("//span[text() = 'Reprint']");
-	
-	
+	By chksthreedotsonhover = By.xpath("//img[@src = '/images/icons/menu_vertical.png']");//three dots on hover
+	By chksvoidcheckbtn = By.xpath("//li[text()= 'Void Check']");//void check btn when clicked on three dots
+	By chksvoidchkdialogcancelbtn = By.xpath("//span[text() = 'Cancel']");//cancel btn in void check popup
 	
 	//-------------------------------
 	public WebElement clickoverview()
@@ -375,6 +377,10 @@ public class OverviewpgPO {
 	{
 		return driver.findElement(chksprintchecksdialog);
 	}
+	public WebElement clickchksreprintchecksdialog()
+	{
+		return driver.findElement(chksreprintchecksdialog);
+	}
 	public WebElement clickchksselectallchkbox()
 	{
 		return driver.findElement(chksselectallchkbox);
@@ -390,6 +396,18 @@ public class OverviewpgPO {
 	public WebElement clickchksreprintbtn()
 	{
 		return driver.findElement(chksreprintbtn);
+	}
+	public WebElement clickchksthreedotsonhover()
+	{
+		return driver.findElement(chksthreedotsonhover);
+	}
+	public WebElement clickchksvoidcheckbtn()
+	{
+		return driver.findElement(chksvoidcheckbtn);
+	}
+	public WebElement clickchksvoidcheckdialogcancelbtn()
+	{
+		return driver.findElement(chksvoidchkdialogcancelbtn);
 	}
 }
 

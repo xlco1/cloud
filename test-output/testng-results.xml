@@ -1,219 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+<testng-results skipped="0" failed="1" ignored="0" total="14" passed="13">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="49135" started-at="2019-05-06T20:32:53Z" finished-at="2019-05-06T20:33:42Z">
+  <suite name="Default suite" duration-ms="82108" started-at="2019-05-15T20:26:39Z" finished-at="2019-05-15T20:28:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="49135" started-at="2019-05-06T20:32:53Z" finished-at="2019-05-06T20:33:42Z">
+    <test name="Default test" duration-ms="82108" started-at="2019-05-15T20:26:39Z" finished-at="2019-05-15T20:28:01Z">
       <class name="clo.LoginPage">
-        <test-method status="PASS" signature="loginPositive()[pri:3, instance:clo.LoginPage@192b07fd]" name="loginPositive" duration-ms="14198" started-at="2019-05-06T20:32:53Z" finished-at="2019-05-06T20:33:07Z">
+        <test-method status="PASS" signature="loginNegative()[pri:1, instance:clo.LoginPage@192b07fd]" name="loginNegative" duration-ms="12302" started-at="2019-05-15T20:26:39Z" finished-at="2019-05-15T20:26:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginNegative -->
+        <test-method status="PASS" signature="forgotPassword()[pri:2, instance:clo.LoginPage@192b07fd]" name="forgotPassword" duration-ms="10591" started-at="2019-05-15T20:26:51Z" finished-at="2019-05-15T20:27:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPassword -->
+        <test-method status="PASS" signature="loginPositive()[pri:3, instance:clo.LoginPage@192b07fd]" name="loginPositive" duration-ms="12370" started-at="2019-05-15T20:27:02Z" finished-at="2019-05-15T20:27:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPositive -->
-        <test-method status="PASS" signature="createNewAppointment()[pri:4, instance:clo.LoginPage@192b07fd]" name="createNewAppointment" duration-ms="8469" started-at="2019-05-06T20:33:07Z" finished-at="2019-05-06T20:33:16Z">
+        <test-method status="PASS" signature="createNewAppointment()[pri:4, instance:clo.LoginPage@192b07fd]" name="createNewAppointment" duration-ms="8080" started-at="2019-05-15T20:27:14Z" finished-at="2019-05-15T20:27:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewAppointment -->
-        <test-method status="PASS" signature="createApptSameTime()[pri:5, instance:clo.LoginPage@192b07fd]" name="createApptSameTime" duration-ms="8291" started-at="2019-05-06T20:33:16Z" finished-at="2019-05-06T20:33:24Z">
+        <test-method status="PASS" signature="createApptSameTime()[pri:5, instance:clo.LoginPage@192b07fd]" name="createApptSameTime" duration-ms="8439" started-at="2019-05-15T20:27:22Z" finished-at="2019-05-15T20:27:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createApptSameTime -->
-        <test-method status="PASS" signature="updateAppointment()[pri:6, instance:clo.LoginPage@192b07fd]" name="updateAppointment" duration-ms="6235" started-at="2019-05-06T20:33:24Z" finished-at="2019-05-06T20:33:30Z">
+        <test-method status="PASS" signature="updateAppointment()[pri:6, instance:clo.LoginPage@192b07fd]" name="updateAppointment" duration-ms="6193" started-at="2019-05-15T20:27:31Z" finished-at="2019-05-15T20:27:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateAppointment -->
-        <test-method status="PASS" signature="deleteAppointment()[pri:7, instance:clo.LoginPage@192b07fd]" name="deleteAppointment" duration-ms="1179" started-at="2019-05-06T20:33:30Z" finished-at="2019-05-06T20:33:31Z">
+        <test-method status="PASS" signature="deleteAppointment()[pri:7, instance:clo.LoginPage@192b07fd]" name="deleteAppointment" duration-ms="1174" started-at="2019-05-15T20:27:37Z" finished-at="2019-05-15T20:27:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAppointment -->
-        <test-method status="PASS" signature="newMessageSent()[pri:8, instance:clo.LoginPage@192b07fd]" name="newMessageSent" duration-ms="4564" started-at="2019-05-06T20:33:31Z" finished-at="2019-05-06T20:33:36Z">
+        <test-method status="FAIL" signature="deleteSecondAppointment()[pri:7, instance:clo.LoginPage@192b07fd]" name="deleteSecondAppointment" duration-ms="58" started-at="2019-05-15T20:27:38Z" finished-at="2019-05-15T20:27:38Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Element <span class="jss450">...</span> is not clickable at point (529, 313). Other element would receive the click: <div class="jss698" aria-hidden="true" style="opacity: 1; will-change: opacity; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"></div>
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 43 milliseconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'coyote', ip: '10.1.1.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9), userDataDir=C:\Users\nmenon\AppData\Local\Temp\scoped_dir60436_10997}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=74.0.3729.131, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 4cc5c095e5b12636bcc63cf6b37952a6]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <span class="jss450">...</span> is not clickable at point (529, 313). Other element would receive the click: <div class="jss698" aria-hidden="true" style="opacity: 1; will-change: opacity; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"></div>
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 43 milliseconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'coyote', ip: '10.1.1.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9), userDataDir=C:\Users\nmenon\AppData\Local\Temp\scoped_dir60436_10997}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=74.0.3729.131, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 4cc5c095e5b12636bcc63cf6b37952a6
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+at clo.LoginPage.deleteSecondAppointment(LoginPage.java:210)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSecondAppointment -->
+        <test-method status="PASS" signature="newMessageSent()[pri:8, instance:clo.LoginPage@192b07fd]" name="newMessageSent" duration-ms="4571" started-at="2019-05-15T20:27:38Z" finished-at="2019-05-15T20:27:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newMessageSent -->
-        <test-method status="PASS" signature="newMessageReply()[pri:9, instance:clo.LoginPage@192b07fd]" name="newMessageReply" duration-ms="3891" started-at="2019-05-06T20:33:36Z" finished-at="2019-05-06T20:33:40Z">
+        <test-method status="PASS" signature="newMessageReply()[pri:9, instance:clo.LoginPage@192b07fd]" name="newMessageReply" duration-ms="3820" started-at="2019-05-15T20:27:43Z" finished-at="2019-05-15T20:27:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newMessageReply -->
-        <test-method status="PASS" signature="deleteMessage()[pri:10, instance:clo.LoginPage@192b07fd]" name="deleteMessage" duration-ms="2277" started-at="2019-05-06T20:33:40Z" finished-at="2019-05-06T20:33:42Z">
+        <test-method status="PASS" signature="deleteMessage()[pri:10, instance:clo.LoginPage@192b07fd]" name="deleteMessage" duration-ms="2289" started-at="2019-05-15T20:27:47Z" finished-at="2019-05-15T20:27:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteMessage -->
+        <test-method status="PASS" signature="checksReadyToPrint()[pri:11, instance:clo.LoginPage@192b07fd]" name="checksReadyToPrint" duration-ms="4782" started-at="2019-05-15T20:27:49Z" finished-at="2019-05-15T20:27:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checksReadyToPrint -->
+        <test-method status="PASS" signature="checksRegister()[pri:12, instance:clo.LoginPage@192b07fd]" name="checksRegister" duration-ms="5616" started-at="2019-05-15T20:27:54Z" finished-at="2019-05-15T20:27:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checksRegister -->
+        <test-method status="PASS" signature="voidCheck()[pri:13, instance:clo.LoginPage@192b07fd]" name="voidCheck" duration-ms="1770" started-at="2019-05-15T20:27:59Z" finished-at="2019-05-15T20:28:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- voidCheck -->
       </class> <!-- clo.LoginPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
-=======
-<testng-results skipped="1" failed="0" ignored="0" total="2" passed="1">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Suite1" duration-ms="24154" started-at="2019-04-09T17:13:39Z" finished-at="2019-04-09T17:14:03Z">
-    <groups>
-    </groups>
-    <test name="testinqa" duration-ms="15325" started-at="2019-04-09T17:13:39Z" finished-at="2019-04-09T17:13:55Z">
-      <class name="clo.AddaNewReturn">
-        <test-method status="PASS" signature="login(java.lang.String)[pri:0, instance:clo.AddaNewReturn@1d296da]" name="login" is-config="true" duration-ms="11501" started-at="2019-04-09T17:13:39Z" finished-at="2019-04-09T17:13:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[qa]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="addareturn()[pri:1, instance:clo.AddaNewReturn@1d296da]" name="addareturn" duration-ms="1082" started-at="2019-04-09T17:13:51Z" finished-at="2019-04-09T17:13:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addareturn -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:clo.AddaNewReturn@1d296da]" name="teardown" is-config="true" duration-ms="2721" started-at="2019-04-09T17:13:52Z" finished-at="2019-04-09T17:13:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- clo.AddaNewReturn -->
-    </test> <!-- testinqa -->
-    <test name="testindev" duration-ms="8813" started-at="2019-04-09T17:13:55Z" finished-at="2019-04-09T17:14:03Z">
-      <class name="clo.AddaNewReturn">
-        <test-method status="FAIL" signature="login(java.lang.String)[pri:0, instance:clo.AddaNewReturn@3fc2959f]" name="login" is-config="true" duration-ms="8778" started-at="2019-04-09T17:13:55Z" finished-at="2019-04-09T17:14:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: Element <button class="jss408 jss382 jss384 jss387" tabindex="0" type="button" id="btnStartTour" style="width: 10vw; min-height: 3.5vh; text-transform: capitalize; font-family: Roboto; font-size: 14px; border-radius: 4px; margin-right: 1.5vw; padding: 0px;">...</button> is not clickable at point (646, 492). Other element would receive the click: <form style="margin-left: 3vw; margin-right: 3vw; margin-top: 1vh;">...</form>
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 212 milliseconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'qaint', ip: '89.0.1.156', os.name: 'Windows Server 2012', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9), userDataDir=C:\Users\SSREEN~1\AppData\Local\Temp\2\scoped_dir11324_21635}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=73.0.3683.86, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: a40f21fc70328ee1cf74cf1c934e251b]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <button class="jss408 jss382 jss384 jss387" tabindex="0" type="button" id="btnStartTour" style="width: 10vw; min-height: 3.5vh; text-transform: capitalize; font-family: Roboto; font-size: 14px; border-radius: 4px; margin-right: 1.5vw; padding: 0px;">...</button> is not clickable at point (646, 492). Other element would receive the click: <form style="margin-left: 3vw; margin-right: 3vw; margin-top: 1vh;">...</form>
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 212 milliseconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'qaint', ip: '89.0.1.156', os.name: 'Windows Server 2012', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9), userDataDir=C:\Users\SSREEN~1\AppData\Local\Temp\2\scoped_dir11324_21635}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=73.0.3683.86, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: a40f21fc70328ee1cf74cf1c934e251b
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-at clo.AddaNewReturn.login(AddaNewReturn.java:200)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.TestRunner.beforeRun(TestRunner.java:529)
-at org.testng.TestRunner.run(TestRunner.java:497)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="SKIP" signature="addareturn()[pri:1, instance:clo.AddaNewReturn@3fc2959f]" name="addareturn" duration-ms="0" started-at="2019-04-09T17:14:03Z" finished-at="2019-04-09T17:14:03Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: Element <button class="jss408 jss382 jss384 jss387" tabindex="0" type="button" id="btnStartTour" style="width: 10vw; min-height: 3.5vh; text-transform: capitalize; font-family: Roboto; font-size: 14px; border-radius: 4px; margin-right: 1.5vw; padding: 0px;">...</button> is not clickable at point (646, 492). Other element would receive the click: <form style="margin-left: 3vw; margin-right: 3vw; margin-top: 1vh;">...</form>
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 212 milliseconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'qaint', ip: '89.0.1.156', os.name: 'Windows Server 2012', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9), userDataDir=C:\Users\SSREEN~1\AppData\Local\Temp\2\scoped_dir11324_21635}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=73.0.3683.86, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: a40f21fc70328ee1cf74cf1c934e251b]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <button class="jss408 jss382 jss384 jss387" tabindex="0" type="button" id="btnStartTour" style="width: 10vw; min-height: 3.5vh; text-transform: capitalize; font-family: Roboto; font-size: 14px; border-radius: 4px; margin-right: 1.5vw; padding: 0px;">...</button> is not clickable at point (646, 492). Other element would receive the click: <form style="margin-left: 3vw; margin-right: 3vw; margin-top: 1vh;">...</form>
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 212 milliseconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'qaint', ip: '89.0.1.156', os.name: 'Windows Server 2012', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9), userDataDir=C:\Users\SSREEN~1\AppData\Local\Temp\2\scoped_dir11324_21635}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=73.0.3683.86, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: a40f21fc70328ee1cf74cf1c934e251b
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-at clo.AddaNewReturn.login(AddaNewReturn.java:200)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.TestRunner.beforeRun(TestRunner.java:529)
-at org.testng.TestRunner.run(TestRunner.java:497)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addareturn -->
-        <test-method status="SKIP" signature="teardown()[pri:0, instance:clo.AddaNewReturn@3fc2959f]" name="teardown" is-config="true" duration-ms="0" started-at="2019-04-09T17:14:03Z" finished-at="2019-04-09T17:14:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- clo.AddaNewReturn -->
-    </test> <!-- testindev -->
-  </suite> <!-- Suite1 -->
->>>>>>> 858cbda532beba182f353a51fc22382ced550cfd
 </testng-results>

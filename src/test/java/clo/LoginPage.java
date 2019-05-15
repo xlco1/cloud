@@ -13,6 +13,7 @@ import org.apache.logging.log4j.core.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -31,7 +32,7 @@ public class LoginPage extends Base{
 	
 	public WebDriver driver;
 
-/*	
+	
 @Test(priority = 1)
 public void loginNegative() throws IOException, InterruptedException
 	{
@@ -79,7 +80,7 @@ public void forgotPassword() throws IOException, InterruptedException
 	donebtn.click();
 	driver.quit();
 }
-*/
+
 @Test(priority = 3)
 public void loginPositive() throws IOException, InterruptedException
 {
@@ -108,81 +109,7 @@ public void loginPositive() throws IOException, InterruptedException
 	
 }
 
-/*
 
-@Test
-public void addPreparerPositive() throws IOException
-{
-	driver = invokeBrowser();
-	driver.get("https://qa.crosslinkonline.com/#");
-	LogincloPO lp = new LogincloPO(driver);
-	lp.getusername().sendKeys("000334");
-	lp.getPassword().sendKeys("P@ssword1");
-	lp.clickLogin().click();
-	lp.clicksecLogin().click();
-	lp.clickmarkaspublic().click();
-	lp.clickthrdcontbtn().click();
-    lp.clickcontbtnIRS().click();
-    lp.clickcanceltour().click();
-    try {
-		
-		OverviewpgPO op = new OverviewpgPO(driver);
-		op.clickNewpreparerbtn().click();
-		//logger.info("Clicked New preparer button");
-		Thread.sleep(1000);
-		PreparerinCompleteSetupPO pc= new PreparerinCompleteSetupPO(driver);
-		pc.clkAddNewbtn().click();
-		//logger.info("Entering New Preparers Info");
-		pc.getPrepID().sendKeys("505");
-		//pc.getThirdPartyPIN().sendKeys("12345");
-		pc.getPrepName().sendKeys("505Test Preparer");
-		pc.getPrepSSN().sendKeys("123456789");
-		pc.getPrepPTIN().sendKeys("P01111111");
-		pc.getPrepType().click();
-		pc.getPrepTypeOption().click();
-		pc.getPrepEmail().sendKeys("qa13@petzent.com");
-		pc.getPrepcellph().sendKeys("6103088236");
-		pc.getPrepcellCarrier().click();
-		pc.getprepcellCarrierOption().click();
-		pc.getFirmName().sendKeys("The Firm");
-		//pc.getEIN().sendKeys("123456789");
-		pc.getFirmAddress().sendKeys("12 main st");
-		pc.getCity().sendKeys("tracy");
-		pc.getState().sendKeys("CA");
-		pc.getZip().sendKeys("95337");
-		pc.getOfficeph().sendKeys("2094568252");
-		pc.getEFINID().sendKeys("0000333");
-		pc.clickAddNewPrep().click();
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		if(pc.getErrortoNewPrep().isDisplayed())
-		{
-			logger.error("Alert shows: " + pc.getErrortoNewPrep().getText());
-			logger.fatal("Error Desc : " + pc.getErrorDesc().getText());
-			pc.clickDonebtninError().click();
-		}
-		else 
-		{
-			logger.info("New Preparer Created");
-			pc.clickDonebtninError().click();
-		}
-		
-		CompletesetupPO cs = new CompletesetupPO(driver);
-		WebDriverWait wait = new WebDriverWait(driver,10);
-		wait.until(ExpectedConditions.elementToBeClickable(cs.clkCloseSetupBtn()));
-		//logger.info("explicit wait success");
-		cs.clkCloseSetupBtn().click();
-		logger.info("Closing the setup.Going to Overview page");
-		//Thread.sleep(1000);--------------1st change
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-	} catch (Exception e) {
-		logger.error("Error " + e);
-	}
-<<<<<<< HEAD
-}
-}
-}
-
-*/
 
 	@Test(priority = 4)
 	public void createNewAppointment() throws IOException, InterruptedException
@@ -207,9 +134,7 @@ public void addPreparerPositive() throws IOException
 		System.out.println("Create new appointment passed");
 		op.clickapptcreatedclsoebtn().click();
 		Thread.sleep(1000);
-=======
-	*/
->>>>>>> 858cbda532beba182f353a51fc22382ced550cfd
+
 	
 	}
 	
@@ -227,7 +152,7 @@ public void addPreparerPositive() throws IOException
 		op.clickapptsubject().sendKeys("Another appointment at same time");
 		op.clickapptpreparesname().sendKeys("Testpreparer");
 		op.clickapptphonenumber().sendKeys("2098352720");
-		op.clickapptcomments().sendKeys("Test comments!");
+		op.clickapptcomments().sendKeys("Second appointment at the same time");
 		Thread.sleep(1000);
 		op.clickapptsendbtn().click();
 		Thread.sleep(2000);
@@ -278,7 +203,19 @@ public void addPreparerPositive() throws IOException
 		//op.clickapptclosedeletemodalbtn().click();
 	}
 
-	
+	/*@Test(priority = 7)
+	public void deleteSecondAppointment() throws IOException, InterruptedException
+	{
+		OverviewpgPO op = new OverviewpgPO(driver);
+		op.clickapptdeletebtn().click();
+		Thread.sleep(1000);
+		op.clickapptdelconfirmbtn().click();
+		//System.out.println(op.clickapptcreateddialog().getText());
+		//assertTrue(op.clickapptcreateddialog().getText().contains("The appointment was deleted successfully."));
+		System.out.println("Delete Second appointment passed");
+		//op.clickapptclosedeletemodalbtn().click();
+	}
+	*/
 	@Test(priority = 8)
 	public void newMessageSent() throws IOException, InterruptedException
 	{
@@ -329,9 +266,7 @@ public void addPreparerPositive() throws IOException
 		System.out.println("Delete Message Passed");
 	}
 	
-<<<<<<< HEAD
 	
-	/*
 	@Test(priority = 11)
 	public void checksReadyToPrint() throws IOException, InterruptedException
 	{
@@ -349,27 +284,39 @@ public void addPreparerPositive() throws IOException
 		Thread.sleep(1000);
 		op.clickchksprintcheckscancelbtn().click();
 	}
-				
+			
 	@Test(priority = 12)
 	public void checksRegister() throws IOException, InterruptedException
 	{
 		OverviewpgPO op = new OverviewpgPO(driver); 
 		Thread.sleep(1000);
 		op.clickchkscheckregistertab().click();
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		op.clickchksselectallchkbox().click();
 		op.clickchksreprintbtn().click();
 		Thread.sleep(1000);
-		System.out.println(op.clickchksprintchecksdialog().getText());
-		assertTrue(op.clickchksprintchecksdialog().getText().contains("Check Reprint"));
+		System.out.println(op.clickchksreprintchecksdialog().getText());
+		assertTrue(op.clickchksreprintchecksdialog().getText().contains("Check Reprint"));
 		Thread.sleep(1000);
 		op.clickchksprintcheckscancelbtn().click();
 	}
-	*/
+
+	@Test(priority = 13)
+	public void voidCheck() throws IOException, InterruptedException
+	{
+		OverviewpgPO op = new OverviewpgPO(driver); 
+		Thread.sleep(1000);
+		WebElement frstRow = driver.findElement(By.xpath("//tr/td[text() = 'TPG']"));
+		Actions act = new Actions(driver);
+		act.moveToElement(frstRow).moveToElement(op.clickchksthreedotsonhover()).click().build().perform();
+		op.clickchksvoidcheckbtn().click();
+		op.clickchksvoidcheckdialogcancelbtn().click();
+		
+	}
+
 }
 
 
 
-=======
->>>>>>> 858cbda532beba182f353a51fc22382ced550cfd
+
 
