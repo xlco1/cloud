@@ -4,6 +4,8 @@
   <test thread-count="5" name="Test2">
     <classes>
       <class name="clo.LoginPage"/>
+   	 <class name = "clo.SettingsChanges"/>
+   	 <class name = "clo.DatabaseSettings"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

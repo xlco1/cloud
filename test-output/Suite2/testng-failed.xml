@@ -6,15 +6,7 @@
       <class name="clo.LoginPage">
         <methods>
           <include name="createNewAppointment"/>
-          <include name="deleteMessage"/>
-          <include name="deleteAppointment"/>
-          <include name="checksReadyToPrint"/>
-          <include name="voidCheck"/>
-          <include name="checksRegister"/>
-          <include name="createApptSameTime"/>
-          <include name="newMessageReply"/>
-          <include name="updateAppointment"/>
-          <include name="newMessageSent"/>
+          <include name="teardown"/>
         </methods>
       </class> <!-- clo.LoginPage -->
     </classes>
