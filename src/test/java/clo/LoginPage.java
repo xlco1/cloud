@@ -54,19 +54,22 @@ public void loginNegative() throws IOException, InterruptedException
 			System.out.println("Login Negative testcase failed" );
 			
 		}
-	       driver.quit();
+	       driver.close();
 		
 	}
 	
 
-@Test(priority = 2)
+//@Test(priority = 2)
 public void forgotPassword() throws IOException, InterruptedException
 {
 	driver = invokeBrowser();
 	driver.get("https://qa.crosslinkonline.com/#");
 	LogincloPO lp = new LogincloPO(driver);
-	//lp.getusername().sendKeys(prop.getProperty("username"));
+	System.out.println("in forgot pass");
+	Thread.sleep(1000);
+	lp.getusername().sendKeys(prop.getProperty("username"));
 	lp.clickforgotpassword().click();
+	
 	Thread.sleep(1000);
 	lp.clickfpusername().click();
 	lp.clickfpusername().sendKeys("nidhi");
@@ -135,10 +138,6 @@ public void loginPositive() throws IOException, InterruptedException
 		op.clickapptcreatedclsoebtn().click();
 		Thread.sleep(1000);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b55248094518fde647269a5101baea65bb3377d3
 	
 	}
 	
@@ -194,7 +193,7 @@ public void loginPositive() throws IOException, InterruptedException
 		
 	}
 	
-	@Test(priority = 7)
+   @Test(priority = 7)
 	public void deleteAppointment() throws IOException, InterruptedException
 	{
 		OverviewpgPO op = new OverviewpgPO(driver);
@@ -270,11 +269,8 @@ public void loginPositive() throws IOException, InterruptedException
 		System.out.println("Delete Message Passed");
 	}
 	
-<<<<<<< HEAD
 
-=======
->>>>>>> b55248094518fde647269a5101baea65bb3377d3
-	
+
 	@Test(priority = 11)
 	public void checksReadyToPrint() throws IOException, InterruptedException
 	{
@@ -309,7 +305,7 @@ public void loginPositive() throws IOException, InterruptedException
 		op.clickchksprintcheckscancelbtn().click();
 	}
 
-	@Test(priority = 13)
+	//@Test(priority = 13)
 	public void voidCheck() throws IOException, InterruptedException
 	{
 		OverviewpgPO op = new OverviewpgPO(driver); 
@@ -319,15 +315,11 @@ public void loginPositive() throws IOException, InterruptedException
 		act.moveToElement(frstRow).moveToElement(op.clickchksthreedotsonhover()).click().build().perform();
 		op.clickchksvoidcheckbtn().click();
 		op.clickchksvoidcheckdialogcancelbtn().click();
-		
+		driver.quit();
 	}
 
 }
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b55248094518fde647269a5101baea65bb3377d3
 

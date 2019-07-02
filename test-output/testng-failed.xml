@@ -1,33 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<<<<<<< HEAD
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite2]">
   <test thread-count="5" name="Test2(failed)">
     <classes>
       <class name="clo.LoginPage">
         <methods>
-          <include name="createNewAppointment"/>
-          <include name="deleteMessage"/>
-          <include name="deleteAppointment"/>
-          <include name="createApptSameTime"/>
-          <include name="newMessageReply"/>
-          <include name="updateAppointment"/>
-          <include name="newMessageSent"/>
+          <include name="voidCheck"/>
         </methods>
       </class> <!-- clo.LoginPage -->
     </classes>
   </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite2] -->
-=======
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
-    <classes>
-      <class name="clo.LoginPage">
-        <methods>
-          <include name="deleteSecondAppointment"/>
-        </methods>
-      </class> <!-- clo.LoginPage -->
-    </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
->>>>>>> b55248094518fde647269a5101baea65bb3377d3
