@@ -21,7 +21,7 @@ import pageObjects.LogincloPO;
 import pageObjects.OverviewpgPO;
 import resources.Base;
 
-public class SettingsChanges extends Base {
+public class AccountSettings extends Base {
 	Logger logger= LogManager.getLogger(getClass());
 
 	public WebDriver driver;
@@ -31,7 +31,7 @@ public class SettingsChanges extends Base {
 @Test(priority =15)
 public void switchYear() throws IOException, InterruptedException
 {
-
+	try {
 	driver = invokeBrowser();
 	driver.get("https://qa.crosslinkonline.com/#");
 	LogincloPO lp = new LogincloPO(driver);
@@ -58,7 +58,7 @@ public void switchYear() throws IOException, InterruptedException
 	ap.clickswitchselectyeardropdown().click();
 	ap.clickswitchoptionyear2018().click();
 	ap.clickswitchbtn().click();
-	System.out.println("switched to the year 2018");
+	//System.out.println("switched to the year 2018");
 	logger.info("switched to the year 2018");
 	test.log(LogStatus.INFO,"switched to the year 2018");
 	Thread.sleep(5000);
@@ -69,15 +69,20 @@ public void switchYear() throws IOException, InterruptedException
 	ap.clickswitchselectyeardropdown().click();
 	ap.clickswitchoptionyear2019().click();
 	ap.clickswitchbtn().click();
-	System.out.println("Switched back to the year 2019");
+	//System.out.println("Switched back to the year 2019");
 	logger.info("Switched back to the year 2019");
 	test.log(LogStatus.INFO,"Switched back to the year 2019");
-	
+	}
+	catch(Exception e) {
+		logger.error("Error in Switch Year" + e);
+		test.log(LogStatus.ERROR, "Error in Switch Year");
+	}
 }
 
 @Test(priority =16)
 public void changePassword() throws IOException, InterruptedException
 {
+	try {
 	AccountSettingsPO ap = new AccountSettingsPO(driver);
 	Thread.sleep(2000);
 	ap.clickaccountsdropdown().click();
@@ -90,12 +95,18 @@ public void changePassword() throws IOException, InterruptedException
 	System.out.println("Password has been changed successfully");
 	logger.info("Password has been changed successfully");
 	test.log(LogStatus.INFO,"Password has been changed successfully");
+	}
+	catch(Exception e) {
+		logger.error("Error in Change Password" + e);
+		test.log(LogStatus.ERROR, "Error in Change Password");
+	}
 	
 	}
 
 @Test(priority = 17)
 public void changePasswordCancel() throws IOException, InterruptedException
 {
+	try {
 	AccountSettingsPO ap = new AccountSettingsPO(driver);
 	Thread.sleep(2000);
 	ap.clickaccountsdropdown().click();
@@ -108,37 +119,57 @@ public void changePasswordCancel() throws IOException, InterruptedException
 	System.out.println("Change password cancelled successfully");
 	logger.info("Change password cancelled successfully");
 	test.log(LogStatus.INFO,"Change password cancelled successfully");
+	}
+	catch(Exception e) {
+		logger.error("Error in Change Password Cancel" + e);
+		test.log(LogStatus.ERROR, "Error in Change Password Cancel");
+	}
+	
 }
 @Test(priority = 18)
 public void toggleTrainingMode() throws IOException, InterruptedException
 {
+	try {
 	AccountSettingsPO ap = new AccountSettingsPO(driver);
 	Thread.sleep(2000);
 	ap.clickaccountsdropdown().click();
 	Thread.sleep(1000);
 	ap.clicktoggletrainingmodelink().click();
-	System.out.println("Switched to training mode");
+	//System.out.println("Switched to training mode");
 	logger.info("Switched to training mode");
 	test.log(LogStatus.INFO,"Switched to training mode");
-	
-	
+	}
+	catch(Exception e) {
+		logger.error("Error in Toggle Training Mode" + e);
+		test.log(LogStatus.ERROR, "Error in Toggle Training Mode");
+	}
+
 }
 @Test(priority = 19)
 public void toggleTrainingModeOff() throws IOException, InterruptedException
 {
+	try {
 	AccountSettingsPO ap = new AccountSettingsPO(driver);
 	Thread.sleep(2000);
 	ap.clickaccountsdropdown().click();
 	Thread.sleep(1000);
 	ap.clicktoggletrainingmodelink().click();
-	System.out.println("Traning Mode off");
+	//System.out.println("Traning Mode off");
 	logger.info("Traning Mode off");
 	test.log(LogStatus.INFO,"Traning Mode off");
+	}
+	catch(Exception e) {
+		logger.error("Error in Traning Mode off" + e);
+		test.log(LogStatus.ERROR, "Error in Traning Mode off");
+	}
+		
+	
 	
 }
 @Test(priority = 20)
 public void captureSignature() throws IOException, InterruptedException
 {
+	try {
 	AccountSettingsPO ap = new AccountSettingsPO(driver);
 	Thread.sleep(2000);
 	ap.clickaccountsdropdown().click();
@@ -158,23 +189,36 @@ public void captureSignature() throws IOException, InterruptedException
 	Thread.sleep(1000);
 	ap.clickcapsigpreviewbtn().click();
 	ap.clickcapsigcancelbtn().click();
-	System.out.println("Captured signature successfully");
+	//System.out.println("Captured signature successfully");
 	logger.info("Captured signature successfully");
 	test.log(LogStatus.INFO,"Captured signature successfully");
+	}
+	catch(Exception e) {
+		logger.error("Error in Capture Signature" + e);
+		test.log(LogStatus.ERROR, "Capture Signature");
+	}
+		
 			
 }
 @Test(priority = 21)
 public void loginSettings() throws IOException, InterruptedException
 {
+	try {
 	AccountSettingsPO ap = new AccountSettingsPO(driver);
 	Thread.sleep(2000);
 	ap.clickaccountsdropdown().click();
 	ap.clickloginsettingslink().click();
-	System.out.println(ap.clickloginsettingsgstitle().getText());
+	//System.out.println(ap.clickloginsettingsgstitle().getText());
 	logger.info(ap.clickloginsettingsgstitle().getText());
 	assertTrue(ap.clickloginsettingsgstitle().getText().contains("Login Settings"));
 	ap.clickloginsetgscancelbtn().click();
+	logger.info("Login settings passed");
 	test.log(LogStatus.INFO,"Login settings Passed");
+}
+catch(Exception e) {
+	logger.error("Error in Login Settings" + e);
+	test.log(LogStatus.ERROR, "Login Settings");
+}
 	//driver.quit();
 }
 
