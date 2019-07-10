@@ -5,12 +5,8 @@
     <classes>
       <class name="clo.LoginPage">
         <methods>
-<<<<<<< HEAD
-          <include name="voidCheck"/>
-=======
-          <include name="createNewAppointment"/>
           <include name="teardown"/>
->>>>>>> 12ac972bd284edd3a05f7b74284c25c156a2b3f2
+          <include name="loginNegative"/>
         </methods>
       </class> <!-- clo.LoginPage -->
     </classes>

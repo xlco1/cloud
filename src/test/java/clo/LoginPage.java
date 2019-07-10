@@ -45,6 +45,7 @@ public void loginNegative() throws IOException, InterruptedException
 		driver = invokeBrowser();
 		driver.get("https://qa.crosslinkonline.com/#");
 		LogincloPO lp = new LogincloPO(driver);
+		logger.info("STARTED : LOGIN NEGATIVE");
 		lp.getusername().sendKeys(prop.getProperty("username"));
 		lp.getPassword().sendKeys("password");
 		Thread.sleep(1000);
@@ -53,8 +54,9 @@ public void loginNegative() throws IOException, InterruptedException
 		System.out.println(invalidPassword.getText());
 		if(invalidPassword.getText().contains("Incorrect password"))
 		{
-		System.out.println("Login Negative testcase passed" );
-		logger.info("Login Negative testcase passed");
+		//System.out.println("Login Negative testcase passed" );
+		logger.info("PASSED : LOGIN NEGATIVE");
+		//logger.info("--------------------------------");
 		test.log(LogStatus.INFO,"Login Negative testcase passed");
 		}
 		else
@@ -76,6 +78,7 @@ public void forgotPassword() throws IOException, InterruptedException
 	driver.get("https://qa.crosslinkonline.com/#");
 	LogincloPO lp = new LogincloPO(driver);
 	System.out.println("in forgot pass");
+	logger.info("STARTED : FORGOT PASSWORD");
 	Thread.sleep(1000);
 	lp.getusername().sendKeys(prop.getProperty("username"));
 	lp.clickforgotpassword().click();
@@ -90,7 +93,7 @@ public void forgotPassword() throws IOException, InterruptedException
 	logger.info(emailsentdialog.getText());
 	assertTrue(emailsentdialog.getText().contains("EMAIL SENT"));
 	System.out.println("forgot password passed");
-	logger.info("forgot password passed");
+	logger.info("SUCCESS : FORGOT PASSWORD");
 	test.log(LogStatus.INFO,"forgot password passed");
 	WebElement donebtn = driver.findElement(By.id("btnHideEmailSentModal"));
 	donebtn.click();
@@ -105,6 +108,7 @@ public void loginPositive() throws IOException, InterruptedException
 	//driver.get(prop.getProperty("url"));
 	//create a obj for logincloPO 
 	LogincloPO lp = new LogincloPO(driver);
+	logger.info("STARTED :LOGIN POSITIVE");
 	OverviewpgPO op = new OverviewpgPO(driver);
 	lp.getusername().sendKeys("000334");
 	lp.getPassword().sendKeys("P@ssword1");
@@ -120,15 +124,15 @@ public void loginPositive() throws IOException, InterruptedException
     System.out.println(op.clickoverview().getText());
     logger.info(op.clickoverview().getText());
    assertTrue(op.clickoverview().getText().contains("Overview"));
-   System.out.println("Login Positive testcase passed" );
-   logger.info("Login Positive testcase passed");
+  // System.out.println("Login Positive testcase passed" );
+   logger.info("SUCCESS : LOGIN POSITIVE");
    test.log(LogStatus.INFO,"Login Positive testcase passed");
    Thread.sleep(1000);
    
 	
 }
 
-@Test(priority = 4)
+//@Test(priority = 4)
 	public void createNewAppointment() throws IOException, InterruptedException
 	{
 	
@@ -158,7 +162,7 @@ public void loginPositive() throws IOException, InterruptedException
 	
 	}
 	
-	@Test(priority = 5)
+	//@Test(priority = 5)
 	public void createApptSameTime() throws IOException, InterruptedException
 	{
 	
@@ -187,7 +191,7 @@ public void loginPositive() throws IOException, InterruptedException
 		Thread.sleep(1000);
 		
 	}
-	@Test(priority = 6)
+	//@Test(priority = 6)
 	public void updateAppointment() throws IOException, InterruptedException
 	{
 		Thread.sleep(1000);
@@ -218,7 +222,7 @@ public void loginPositive() throws IOException, InterruptedException
 		
 	}
 	
-   @Test(priority = 7)
+  // @Test(priority = 7)
 	public void deleteAppointment() throws IOException, InterruptedException
 	{
 		OverviewpgPO op = new OverviewpgPO(driver);
@@ -233,7 +237,7 @@ public void loginPositive() throws IOException, InterruptedException
 		//op.clickapptclosedeletemodalbtn().click();
 	}
 
-	@Test(priority = 8)
+	//@Test(priority = 8)
 	public void deleteSecondAppointment() throws IOException, InterruptedException
 	{
 		OverviewpgPO op = new OverviewpgPO(driver);
@@ -249,7 +253,7 @@ public void loginPositive() throws IOException, InterruptedException
 		//op.clickapptclosedeletemodalbtn().click();
 	}
 	
-	@Test(priority = 9)
+	//@Test(priority = 9)
 	public void newMessageSent() throws IOException, InterruptedException
 	{
 		Thread.sleep(1000);
@@ -274,7 +278,7 @@ public void loginPositive() throws IOException, InterruptedException
 	}
 	
 	
-	@Test(priority = 10)
+	//@Test(priority = 10)
 	public void newMessageReply() throws IOException, InterruptedException
 	{
 		Thread.sleep(2000);
@@ -294,7 +298,7 @@ public void loginPositive() throws IOException, InterruptedException
 		
 	}	
 	
-	@Test(priority = 11)
+	//@Test(priority = 11)
 	public void deleteMessage() throws IOException, InterruptedException
 	{
 		Thread.sleep(2000);
@@ -306,15 +310,8 @@ public void loginPositive() throws IOException, InterruptedException
 		logger.info("Delete Message Passed");
 		test.log(LogStatus.INFO,"Delete Message Passed");
 	}
-	
-<<<<<<< HEAD
-
-
-	@Test(priority = 11)
-=======
-	
-	@Test(priority = 12)
->>>>>>> 12ac972bd284edd3a05f7b74284c25c156a2b3f2
+		
+	//@Test(priority = 12)
 	public void checksReadyToPrint() throws IOException, InterruptedException
 	{
 		Thread.sleep(1000);
@@ -334,7 +331,7 @@ public void loginPositive() throws IOException, InterruptedException
 		test.log(LogStatus.INFO,"Check print Passed");
 	}
 			
-	@Test(priority = 13)
+	//@Test(priority = 13)
 	public void checksRegister() throws IOException, InterruptedException
 	{
 		OverviewpgPO op = new OverviewpgPO(driver); 
@@ -352,11 +349,8 @@ public void loginPositive() throws IOException, InterruptedException
 		test.log(LogStatus.INFO,"Checks re-print Passed");
 	}
 
-<<<<<<< HEAD
-	//@Test(priority = 13)
-=======
-	@Test(priority = 14)
->>>>>>> 12ac972bd284edd3a05f7b74284c25c156a2b3f2
+
+	//@Test(priority = 14)
 	public void voidCheck() throws IOException, InterruptedException
 	{
 		OverviewpgPO op = new OverviewpgPO(driver); 
@@ -366,13 +360,10 @@ public void loginPositive() throws IOException, InterruptedException
 		act.moveToElement(frstRow).moveToElement(op.clickchksthreedotsonhover()).click().build().perform();
 		op.clickchksvoidcheckbtn().click();
 		op.clickchksvoidcheckdialogcancelbtn().click();
-<<<<<<< HEAD
-		driver.quit();
-=======
 		test.log(LogStatus.INFO,"Void Check Passed");
-		//driver.quit();
 		
->>>>>>> 12ac972bd284edd3a05f7b74284c25c156a2b3f2
+		
+
 	}
 	
 	@AfterClass
