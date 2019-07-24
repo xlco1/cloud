@@ -94,7 +94,7 @@ public class DatabaseSettings extends Base {
 		
 		}
 	
-	//@Test(priority = 24)
+	@Test(priority = 24)
 	public void dbDeleteCity() throws IOException, InterruptedException
 	{
 		try {
@@ -104,13 +104,16 @@ public class DatabaseSettings extends Base {
 		WebElement frstRow = driver.findElement(By.xpath("//tr/td[text() = '12346']"));
 		Actions act = new Actions(driver);
 		act.moveToElement(dp.clickeditbtn()).moveToElement(dp.clickthreedots()).click().build().perform();
-		dp.clickthreedots().click();
+		//dp.clickthreedots().click();
 		Thread.sleep(3000);
-		WebElement delbtn = driver.findElement(By.xpath("//[@id='action-menu']/div[2]/ul/li"));
-		delbtn.click();
+		WebElement delbtn = driver.findElement(By.cssSelector("#anchorDeleteButton"));
+				//By.xpath("//*[@id='anchorDeleteButton']/span"));//*[@id="anchorDeleteButton"]/span // #anchorDeleteButton
+		Thread.sleep(2000);
+		//delbtn.click();
+		act.moveToElement(driver.findElement(By.cssSelector("#anchorDeleteButton"))).click().perform();
 		//dp.clickcitiesdeletebtn().click();
 		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		dp.clickcitiesdeletemodaldelbtn().click();
 		//System.out.println("City Deleted Successfully");
 		logger.info("City Deleted Successfully");
@@ -123,7 +126,7 @@ public class DatabaseSettings extends Base {
 	
 	}
 	
-	@Test(priority = 25)
+	//@Test(priority = 25)
 	public void dbaddEmployer() throws IOException, InterruptedException
 	{
 		try {
@@ -152,7 +155,7 @@ public class DatabaseSettings extends Base {
 		}
 	}
 	
-	@Test(priority = 26)
+	//@Test(priority = 26)
 	public void dbeditEmployer() throws IOException, InterruptedException
 	{
 		try {
@@ -205,7 +208,7 @@ public class DatabaseSettings extends Base {
 		}
 }
 	
-	@Test(priority = 28)
+	//@Test(priority = 28)
 	public void dbaddCareProvider() throws IOException, InterruptedException
 	{
 		try {
@@ -234,7 +237,7 @@ public class DatabaseSettings extends Base {
 		}
 		}
 	
-	@Test(priority = 29)
+	//@Test(priority = 29)
 	public void dbeditCareProvider() throws IOException, InterruptedException
 	{
 		try {
@@ -285,7 +288,7 @@ public class DatabaseSettings extends Base {
 		}
 	}
 		
-	@Test(priority = 31)
+	//@Test(priority = 31)
 	public void dbaddReferrals() throws IOException, InterruptedException
 	{
 		try {
@@ -306,7 +309,7 @@ public class DatabaseSettings extends Base {
 		}
 	}
 	
-	@Test(priority = 32)
+	//@Test(priority = 32)
 	public void dbeditReferrals() throws IOException, InterruptedException
 	{
 		try {
@@ -354,7 +357,7 @@ public class DatabaseSettings extends Base {
 	}
 		
 	
-	@Test(priority = 34)
+	//@Test(priority = 34)
 	public void dbaddDonee() throws IOException, InterruptedException
 	{
 		
@@ -382,7 +385,7 @@ public class DatabaseSettings extends Base {
 		}
 	}
 	
-	@Test(priority = 35)
+	//@Test(priority = 35)
 	public void dbeditDonee() throws IOException, InterruptedException
 	{
 		try {
@@ -437,7 +440,7 @@ public class DatabaseSettings extends Base {
 	}
 		
 	
-	@Test(priority = 37)
+	//@Test(priority = 37)
 	public void dbaddBankRTN() throws IOException, InterruptedException
 	{
 		try {
@@ -459,7 +462,7 @@ public class DatabaseSettings extends Base {
 	}
 	}
 	
-	@Test(priority = 38)
+	//@Test(priority = 38)
 	public void dbeditBankRTN() throws IOException, InterruptedException
 	{
 		try {
@@ -509,7 +512,7 @@ public class DatabaseSettings extends Base {
 		}
 	}
 		
-	@Test(priority = 40)
+	//@Test(priority = 40)
 	public void dbaddOccupations() throws IOException, InterruptedException
 	{
 		try {
@@ -531,7 +534,7 @@ public class DatabaseSettings extends Base {
 	 
 	}
 	
-	@Test(priority = 41)
+	//@Test(priority = 41)
 	public void dbeditOccupations() throws IOException, InterruptedException
 	{
 		try {
@@ -579,7 +582,7 @@ public class DatabaseSettings extends Base {
 	}
 	}
 		
-	@Test(priority = 43)
+	//@Test(priority = 43)
 	public void dbaddEducationalInstitute() throws IOException, InterruptedException
 	{
 		try {
@@ -605,7 +608,7 @@ public class DatabaseSettings extends Base {
 		}
 	}
 	
-	@Test(priority = 44)
+	//@Test(priority = 44)
 	public void dbeditEducationalInstitute() throws IOException, InterruptedException
 	{
 		try {
@@ -663,7 +666,7 @@ public class DatabaseSettings extends Base {
 	public void teardown()
 	{
 	 logger.info("in tear down");
-		driver.close();
+		//driver.close();
 		report.endTest(test);
 		report.flush();
 	}

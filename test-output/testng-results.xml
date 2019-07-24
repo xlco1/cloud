@@ -1,229 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite2" duration-ms="31548" started-at="2019-07-10T17:17:18Z" finished-at="2019-07-10T17:17:50Z">
+  <suite name="Suite2" duration-ms="37215" started-at="2019-07-22T18:18:59Z" finished-at="2019-07-22T18:19:36Z">
     <groups>
     </groups>
-    <test name="Test2" duration-ms="31548" started-at="2019-07-10T17:17:18Z" finished-at="2019-07-10T17:17:50Z">
-      <class name="clo.LoginPage">
-        <test-method status="FAIL" signature="loginNegative()[pri:1, instance:clo.LoginPage@292b08d6]" name="loginNegative" duration-ms="15087" started-at="2019-07-10T17:17:18Z" finished-at="2019-07-10T17:17:33Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at clo.LoginPage.loginNegative(LoginPage.java:54)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginNegative -->
-        <test-method status="PASS" signature="loginPositive()[pri:3, instance:clo.LoginPage@292b08d6]" name="loginPositive" duration-ms="13767" started-at="2019-07-10T17:17:33Z" finished-at="2019-07-10T17:17:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginPositive -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:clo.LoginPage@292b08d6]" name="teardown" is-config="true" duration-ms="2663" started-at="2019-07-10T17:17:47Z" finished-at="2019-07-10T17:17:50Z">
-=======
-<testng-results skipped="0" failed="0" ignored="0" total="37" passed="37">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Suite2" duration-ms="199975" started-at="2019-07-10T22:03:33Z" finished-at="2019-07-10T22:06:53Z">
-    <groups>
-    </groups>
-    <test name="Test2" duration-ms="199975" started-at="2019-07-10T22:03:33Z" finished-at="2019-07-10T22:06:53Z">
-      <class name="clo.AccountSettings">
-        <test-method status="PASS" signature="switchYear()[pri:15, instance:clo.AccountSettings@292b08d6]" name="switchYear" duration-ms="28723" started-at="2019-07-10T22:05:01Z" finished-at="2019-07-10T22:05:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- switchYear -->
-        <test-method status="PASS" signature="changePassword()[pri:16, instance:clo.AccountSettings@292b08d6]" name="changePassword" duration-ms="4000" started-at="2019-07-10T22:05:29Z" finished-at="2019-07-10T22:05:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- changePassword -->
-        <test-method status="PASS" signature="changePasswordCancel()[pri:17, instance:clo.AccountSettings@292b08d6]" name="changePasswordCancel" duration-ms="3853" started-at="2019-07-10T22:05:33Z" finished-at="2019-07-10T22:05:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- changePasswordCancel -->
-        <test-method status="PASS" signature="toggleTrainingMode()[pri:18, instance:clo.AccountSettings@292b08d6]" name="toggleTrainingMode" duration-ms="3161" started-at="2019-07-10T22:05:37Z" finished-at="2019-07-10T22:05:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- toggleTrainingMode -->
-        <test-method status="PASS" signature="toggleTrainingModeOff()[pri:19, instance:clo.AccountSettings@292b08d6]" name="toggleTrainingModeOff" duration-ms="3161" started-at="2019-07-10T22:05:40Z" finished-at="2019-07-10T22:05:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- toggleTrainingModeOff -->
-        <test-method status="PASS" signature="captureSignature()[pri:20, instance:clo.AccountSettings@292b08d6]" name="captureSignature" duration-ms="6679" started-at="2019-07-10T22:05:44Z" finished-at="2019-07-10T22:05:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- captureSignature -->
-        <test-method status="PASS" signature="loginSettings()[pri:21, instance:clo.AccountSettings@292b08d6]" name="loginSettings" duration-ms="2431" started-at="2019-07-10T22:05:50Z" finished-at="2019-07-10T22:05:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginSettings -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:clo.AccountSettings@292b08d6]" name="teardown" is-config="true" duration-ms="154" started-at="2019-07-10T22:05:53Z" finished-at="2019-07-10T22:05:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- clo.AccountSettings -->
+    <test name="Test2" duration-ms="37215" started-at="2019-07-22T18:18:59Z" finished-at="2019-07-22T18:19:36Z">
       <class name="clo.DatabaseSettings">
-        <test-method status="PASS" signature="dbAddCity()[pri:22, instance:clo.DatabaseSettings@22555ebf]" name="dbAddCity" duration-ms="21187" started-at="2019-07-10T22:05:53Z" finished-at="2019-07-10T22:06:14Z">
+        <test-method status="PASS" signature="dbAddCity()[pri:22, instance:clo.DatabaseSettings@292b08d6]" name="dbAddCity" duration-ms="23178" started-at="2019-07-22T18:18:59Z" finished-at="2019-07-22T18:19:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbAddCity -->
-        <test-method status="PASS" signature="dbEditCity()[pri:23, instance:clo.DatabaseSettings@22555ebf]" name="dbEditCity" duration-ms="2052" started-at="2019-07-10T22:06:14Z" finished-at="2019-07-10T22:06:16Z">
+        <test-method status="PASS" signature="dbEditCity()[pri:23, instance:clo.DatabaseSettings@292b08d6]" name="dbEditCity" duration-ms="3040" started-at="2019-07-22T18:19:22Z" finished-at="2019-07-22T18:19:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbEditCity -->
-        <test-method status="PASS" signature="dbaddEmployer()[pri:25, instance:clo.DatabaseSettings@22555ebf]" name="dbaddEmployer" duration-ms="4697" started-at="2019-07-10T22:06:16Z" finished-at="2019-07-10T22:06:21Z">
+        <test-method status="PASS" signature="dbDeleteCity()[pri:24, instance:clo.DatabaseSettings@292b08d6]" name="dbDeleteCity" duration-ms="10509" started-at="2019-07-22T18:19:25Z" finished-at="2019-07-22T18:19:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dbaddEmployer -->
-        <test-method status="PASS" signature="dbeditEmployer()[pri:26, instance:clo.DatabaseSettings@22555ebf]" name="dbeditEmployer" duration-ms="3643" started-at="2019-07-10T22:06:21Z" finished-at="2019-07-10T22:06:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbeditEmployer -->
-        <test-method status="PASS" signature="dbaddCareProvider()[pri:28, instance:clo.DatabaseSettings@22555ebf]" name="dbaddCareProvider" duration-ms="3809" started-at="2019-07-10T22:06:24Z" finished-at="2019-07-10T22:06:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbaddCareProvider -->
-        <test-method status="PASS" signature="dbeditCareProvider()[pri:29, instance:clo.DatabaseSettings@22555ebf]" name="dbeditCareProvider" duration-ms="2610" started-at="2019-07-10T22:06:28Z" finished-at="2019-07-10T22:06:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbeditCareProvider -->
-        <test-method status="PASS" signature="dbaddReferrals()[pri:31, instance:clo.DatabaseSettings@22555ebf]" name="dbaddReferrals" duration-ms="1659" started-at="2019-07-10T22:06:31Z" finished-at="2019-07-10T22:06:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbaddReferrals -->
-        <test-method status="PASS" signature="dbeditReferrals()[pri:32, instance:clo.DatabaseSettings@22555ebf]" name="dbeditReferrals" duration-ms="1715" started-at="2019-07-10T22:06:33Z" finished-at="2019-07-10T22:06:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbeditReferrals -->
-        <test-method status="PASS" signature="dbaddDonee()[pri:34, instance:clo.DatabaseSettings@22555ebf]" name="dbaddDonee" duration-ms="3030" started-at="2019-07-10T22:06:34Z" finished-at="2019-07-10T22:06:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbaddDonee -->
-        <test-method status="PASS" signature="dbeditDonee()[pri:35, instance:clo.DatabaseSettings@22555ebf]" name="dbeditDonee" duration-ms="2901" started-at="2019-07-10T22:06:37Z" finished-at="2019-07-10T22:06:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbeditDonee -->
-        <test-method status="PASS" signature="dbaddBankRTN()[pri:37, instance:clo.DatabaseSettings@22555ebf]" name="dbaddBankRTN" duration-ms="1820" started-at="2019-07-10T22:06:40Z" finished-at="2019-07-10T22:06:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbaddBankRTN -->
-        <test-method status="PASS" signature="dbeditBankRTN()[pri:38, instance:clo.DatabaseSettings@22555ebf]" name="dbeditBankRTN" duration-ms="1647" started-at="2019-07-10T22:06:42Z" finished-at="2019-07-10T22:06:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbeditBankRTN -->
-        <test-method status="PASS" signature="dbaddOccupations()[pri:40, instance:clo.DatabaseSettings@22555ebf]" name="dbaddOccupations" duration-ms="1981" started-at="2019-07-10T22:06:44Z" finished-at="2019-07-10T22:06:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbaddOccupations -->
-        <test-method status="PASS" signature="dbeditOccupations()[pri:41, instance:clo.DatabaseSettings@22555ebf]" name="dbeditOccupations" duration-ms="1861" started-at="2019-07-10T22:06:46Z" finished-at="2019-07-10T22:06:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbeditOccupations -->
-        <test-method status="PASS" signature="dbaddEducationalInstitute()[pri:43, instance:clo.DatabaseSettings@22555ebf]" name="dbaddEducationalInstitute" duration-ms="3137" started-at="2019-07-10T22:06:47Z" finished-at="2019-07-10T22:06:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbaddEducationalInstitute -->
-        <test-method status="PASS" signature="dbeditEducationalInstitute()[pri:44, instance:clo.DatabaseSettings@22555ebf]" name="dbeditEducationalInstitute" duration-ms="1990" started-at="2019-07-10T22:06:51Z" finished-at="2019-07-10T22:06:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbeditEducationalInstitute -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:clo.DatabaseSettings@22555ebf]" name="teardown" is-config="true" duration-ms="204" started-at="2019-07-10T22:06:53Z" finished-at="2019-07-10T22:06:53Z">
+        </test-method> <!-- dbDeleteCity -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:clo.DatabaseSettings@292b08d6]" name="teardown" is-config="true" duration-ms="448" started-at="2019-07-22T18:19:36Z" finished-at="2019-07-22T18:19:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- clo.DatabaseSettings -->
-      <class name="clo.LoginPage">
-        <test-method status="PASS" signature="loginNegative()[pri:1, instance:clo.LoginPage@206a70ef]" name="loginNegative" duration-ms="11936" started-at="2019-07-10T22:03:33Z" finished-at="2019-07-10T22:03:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginNegative -->
-        <test-method status="PASS" signature="forgotPassword()[pri:2, instance:clo.LoginPage@206a70ef]" name="forgotPassword" duration-ms="9298" started-at="2019-07-10T22:03:45Z" finished-at="2019-07-10T22:03:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgotPassword -->
-        <test-method status="PASS" signature="loginPositive()[pri:3, instance:clo.LoginPage@206a70ef]" name="loginPositive" duration-ms="15084" started-at="2019-07-10T22:03:54Z" finished-at="2019-07-10T22:04:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginPositive -->
-        <test-method status="PASS" signature="createNewAppointment()[pri:4, instance:clo.LoginPage@206a70ef]" name="createNewAppointment" duration-ms="8083" started-at="2019-07-10T22:04:09Z" finished-at="2019-07-10T22:04:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createNewAppointment -->
-        <test-method status="PASS" signature="createApptSameTime()[pri:5, instance:clo.LoginPage@206a70ef]" name="createApptSameTime" duration-ms="8430" started-at="2019-07-10T22:04:17Z" finished-at="2019-07-10T22:04:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createApptSameTime -->
-        <test-method status="PASS" signature="updateAppointment()[pri:6, instance:clo.LoginPage@206a70ef]" name="updateAppointment" duration-ms="6193" started-at="2019-07-10T22:04:26Z" finished-at="2019-07-10T22:04:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateAppointment -->
-        <test-method status="PASS" signature="deleteAppointment()[pri:7, instance:clo.LoginPage@206a70ef]" name="deleteAppointment" duration-ms="1169" started-at="2019-07-10T22:04:32Z" finished-at="2019-07-10T22:04:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAppointment -->
-        <test-method status="PASS" signature="deleteSecondAppointment()[pri:8, instance:clo.LoginPage@206a70ef]" name="deleteSecondAppointment" duration-ms="2158" started-at="2019-07-10T22:04:33Z" finished-at="2019-07-10T22:04:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteSecondAppointment -->
-        <test-method status="PASS" signature="newMessageSent()[pri:9, instance:clo.LoginPage@206a70ef]" name="newMessageSent" duration-ms="4652" started-at="2019-07-10T22:04:35Z" finished-at="2019-07-10T22:04:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- newMessageSent -->
-        <test-method status="PASS" signature="newMessageReply()[pri:10, instance:clo.LoginPage@206a70ef]" name="newMessageReply" duration-ms="3859" started-at="2019-07-10T22:04:40Z" finished-at="2019-07-10T22:04:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- newMessageReply -->
-        <test-method status="PASS" signature="deleteMessage()[pri:11, instance:clo.LoginPage@206a70ef]" name="deleteMessage" duration-ms="2355" started-at="2019-07-10T22:04:44Z" finished-at="2019-07-10T22:04:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteMessage -->
-        <test-method status="PASS" signature="checksReadyToPrint()[pri:12, instance:clo.LoginPage@206a70ef]" name="checksReadyToPrint" duration-ms="4905" started-at="2019-07-10T22:04:46Z" finished-at="2019-07-10T22:04:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checksReadyToPrint -->
-        <test-method status="PASS" signature="checksRegister()[pri:13, instance:clo.LoginPage@206a70ef]" name="checksRegister" duration-ms="5529" started-at="2019-07-10T22:04:51Z" finished-at="2019-07-10T22:04:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checksRegister -->
-        <test-method status="PASS" signature="voidCheck()[pri:14, instance:clo.LoginPage@206a70ef]" name="voidCheck" duration-ms="1783" started-at="2019-07-10T22:04:57Z" finished-at="2019-07-10T22:04:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- voidCheck -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:clo.LoginPage@206a70ef]" name="teardown" is-config="true" duration-ms="2371" started-at="2019-07-10T22:04:58Z" finished-at="2019-07-10T22:05:01Z">
->>>>>>> a1df837363b8e6e6d749d7f5f54b0b34e42bf6e7
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- clo.LoginPage -->
     </test> <!-- Test2 -->
   </suite> <!-- Suite2 -->
 </testng-results>

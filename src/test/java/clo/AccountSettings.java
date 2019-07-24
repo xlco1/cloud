@@ -92,7 +92,7 @@ public void changePassword() throws IOException, InterruptedException
 	ap.clicknewpassword().sendKeys("P@ssword1");
 	ap.clickretypepassword().sendKeys("P@ssword1");
 	ap.clickchangepasswordbtn().click();
-	System.out.println("Password has been changed successfully");
+	//System.out.println("Password has been changed successfully");
 	logger.info("Password has been changed successfully");
 	test.log(LogStatus.INFO,"Password has been changed successfully");
 	}
@@ -116,7 +116,7 @@ public void changePasswordCancel() throws IOException, InterruptedException
 	ap.clicknewpassword().sendKeys("P@ssword4");
 	ap.clickretypepassword().sendKeys("P@ssword4");
 	ap.clickcancelbtn().click();
-	System.out.println("Change password cancelled successfully");
+	//System.out.println("Change password cancelled successfully");
 	logger.info("Change password cancelled successfully");
 	test.log(LogStatus.INFO,"Change password cancelled successfully");
 	}

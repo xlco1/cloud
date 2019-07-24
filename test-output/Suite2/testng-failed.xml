@@ -6,20 +6,7 @@
       <class name="clo.LoginPage">
         <methods>
           <include name="teardown"/>
-<<<<<<< HEAD
-          <include name="loginNegative"/>
-=======
-          <include name="deleteMessage"/>
-          <include name="deleteSecondAppointment"/>
-          <include name="deleteAppointment"/>
-          <include name="checksReadyToPrint"/>
-          <include name="voidCheck"/>
-          <include name="checksRegister"/>
-          <include name="createApptSameTime"/>
-          <include name="newMessageReply"/>
-          <include name="updateAppointment"/>
-          <include name="newMessageSent"/>
->>>>>>> a1df837363b8e6e6d749d7f5f54b0b34e42bf6e7
+          <include name="forgotPassword"/>
         </methods>
       </class> <!-- clo.LoginPage -->
     </classes>
