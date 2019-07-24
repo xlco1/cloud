@@ -4,8 +4,13 @@
   <test thread-count="5" name="Test2">
     <classes>
       <class name="clo.LoginPage"/>
+<<<<<<< HEAD
+      <!-- <class name="clo.SettingsChanges"/>
+      <class name="clo.DatabaseSettings"/> -->
+=======
    	 <class name = "clo.AccountSettings"/>
    	 <class name = "clo.DatabaseSettings"/>
+>>>>>>> a1df837363b8e6e6d749d7f5f54b0b34e42bf6e7
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

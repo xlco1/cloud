@@ -29,7 +29,11 @@ public class LogincloPO {
 	By thrdcontbtn = By.id("btnContinueMFACODE");
 	By contbtnIRS = By.id("btnContinueIRSMessage");
 	By canceltour = By.id("btnStartTour");
-	By forgotpasswordbtn = By.id("divForgotPassLogin");//Forgot password link
+	By forgotpasswordbtn = By.cssSelector("#typForgotPassLogin");
+			//By.id("divForgotPassLogin");//#typForgotPassLogin
+			//By.xpath("//*[@id='typForgotPassLogin']"); //*[@id="typForgotPassLogin"] 
+			//By.id("typForgotPassLogin");
+			//By.id("divForgotPassLogin");//Forgot password link
 	By sendcodebtn = By.id("btnSendCodeFP");//Send code in forgot password dialog
 	By fpusername = By.id("txtUsernameFP");// username field for forgot password dialog
 	
