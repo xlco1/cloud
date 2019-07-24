@@ -6,7 +6,11 @@
       <class name="clo.LoginPage">
         <methods>
           <include name="teardown"/>
+<<<<<<< HEAD
           <include name="forgotPassword"/>
+=======
+          <include name="newMessageSent"/>
+>>>>>>> 15e8764a95539d65b4722d57f2c5b0ed2c38d4e7
         </methods>
       </class> <!-- clo.LoginPage -->
     </classes>

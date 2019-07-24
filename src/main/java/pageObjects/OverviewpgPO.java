@@ -43,6 +43,7 @@ public class OverviewpgPO {
 	By apptcomments = By.id("txtCommentsApptModal");//comments in create new appt
 	By apptsendbtn = By.id("btnSendMessageModal");//sendbtn in create new appt
 	By apptclosebtn = By.id("btnCloseMessageModal");//close button in create new appt
+	//By apptclosebtn = By.id("btnHideAppointmentCreatedModal");
 	By apptschconflictconfirmbtn = By.id("btnConfirmDialog");//confirm btn in scheduling conflit modal
 	By apptschconflictcancelbtn = By.id("btnCancelDialog");//cancel btn in scheduling conflict modal
 	By apptcreateddialog = By.id("confirm-delete-desc");//appointment created dialog

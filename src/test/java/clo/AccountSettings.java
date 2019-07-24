@@ -156,10 +156,10 @@ public void toggleTrainingModeOff() throws IOException, InterruptedException
 	ap.clicktoggletrainingmodelink().click();
 	//System.out.println("Traning Mode off");
 	logger.info("Traning Mode off");
-	test.log(LogStatus.INFO,"Traning Mode off");
+	test.log(LogStatus.INFO,"Training Mode off");
 	}
 	catch(Exception e) {
-		logger.error("Error in Traning Mode off" + e);
+		logger.error("Error in Training Mode off" + e);
 		test.log(LogStatus.ERROR, "Error in Traning Mode off");
 	}
 		

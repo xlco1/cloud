@@ -24,7 +24,7 @@ public class DatabaseSettingsPO {
 		By threedots = By.xpath("//img[@src = '/images/icons/menu_vertical.png']");//three dots on hover
 		By searchfield = By.id("txtUserDBFilterString");// search field
 		//By citiesdeletebtn = By.xpath("//li[text() = 'Delete']"); //Delete city button
-		By citiesdeletebtn	= By.xpath("//span[@class = 'jss361']");
+		By citiesdeletebtn	= By.id("anchorDeleteButton");
 		By citiesdeltitle = By.id("confirm-delete-rec-title");// Delete title
 		By citiesdeletemodaldelbtn = By.id("btnDoDeleteFormViewer");//delete btn in the delete modal
 		//--------------------------Employer/Payer---------------------------------------------------------------------
@@ -79,8 +79,8 @@ public class DatabaseSettingsPO {
 		By bankrtn = By.id("txtBankRtnUpsertBankRtnNumber");//bank rtn
 		By bankname = By.id("txtBankRtnUpsertBankRtnName");//bank name
 		By bankcancelbtn = By.id("btnCancelAddUpsertBankRtn");// bank cancel btn
-		By banksavebtn = By.id("btnCancelAddUpsertBankRtn");//bank add btn
-		//-------------------------------------Occupations---------------------------------------------------------------------
+		By banksavebtn = By.id("btnUpsertBankRtn");//bank add btn
+		//-------------------------------------Occupationns---------------------------------------------------------------------
 		By occupationslink = By.id("dbClickableRowOccupations");// occupations link
 		By occupationname = By.id("txtOccupationUpsertOccupationn");// Occupation name
 		By occupationcancelbtn = By.id("btnCancelAddUpsertOccupation");// occupation cancel btn

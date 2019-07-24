@@ -3,12 +3,33 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite2]">
   <test thread-count="5" name="Test2(failed)">
     <classes>
-      <class name="clo.LoginPage">
+      <class name="clo.AccountSettings">
         <methods>
           <include name="teardown"/>
+<<<<<<< HEAD
           <include name="forgotPassword"/>
+=======
+<<<<<<< HEAD
+          <include name="loginSettings"/>
+=======
+<<<<<<< HEAD
+          <include name="loginNegative"/>
+=======
+          <include name="deleteMessage"/>
+          <include name="deleteSecondAppointment"/>
+          <include name="deleteAppointment"/>
+          <include name="checksReadyToPrint"/>
+          <include name="voidCheck"/>
+          <include name="checksRegister"/>
+          <include name="createApptSameTime"/>
+          <include name="newMessageReply"/>
+          <include name="updateAppointment"/>
+          <include name="newMessageSent"/>
+>>>>>>> a1df837363b8e6e6d749d7f5f54b0b34e42bf6e7
+>>>>>>> 2fc615bc5fffadca6d1274b1ebf27701d10d798c
+>>>>>>> 15e8764a95539d65b4722d57f2c5b0ed2c38d4e7
         </methods>
-      </class> <!-- clo.LoginPage -->
+      </class> <!-- clo.AccountSettings -->
     </classes>
   </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite2] -->
