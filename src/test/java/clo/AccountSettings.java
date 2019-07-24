@@ -92,7 +92,7 @@ public void changePassword() throws IOException, InterruptedException
 	ap.clicknewpassword().sendKeys("P@ssword1");
 	ap.clickretypepassword().sendKeys("P@ssword1");
 	ap.clickchangepasswordbtn().click();
-	System.out.println("Password has been changed successfully");
+	//System.out.println("Password has been changed successfully");
 	logger.info("Password has been changed successfully");
 	test.log(LogStatus.INFO,"Password has been changed successfully");
 	}
@@ -116,7 +116,7 @@ public void changePasswordCancel() throws IOException, InterruptedException
 	ap.clicknewpassword().sendKeys("P@ssword4");
 	ap.clickretypepassword().sendKeys("P@ssword4");
 	ap.clickcancelbtn().click();
-	System.out.println("Change password cancelled successfully");
+	//System.out.println("Change password cancelled successfully");
 	logger.info("Change password cancelled successfully");
 	test.log(LogStatus.INFO,"Change password cancelled successfully");
 	}
@@ -156,10 +156,10 @@ public void toggleTrainingModeOff() throws IOException, InterruptedException
 	ap.clicktoggletrainingmodelink().click();
 	//System.out.println("Traning Mode off");
 	logger.info("Traning Mode off");
-	test.log(LogStatus.INFO,"Traning Mode off");
+	test.log(LogStatus.INFO,"Training Mode off");
 	}
 	catch(Exception e) {
-		logger.error("Error in Traning Mode off" + e);
+		logger.error("Error in Training Mode off" + e);
 		test.log(LogStatus.ERROR, "Error in Traning Mode off");
 	}
 		

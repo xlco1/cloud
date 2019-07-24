@@ -32,7 +32,7 @@ public class AccountSettingsPO {
 		By capsigpreviewbtn = By.xpath("//span[text() = 'Preview']");// Preview btn in capture signature modal
 		By capsigbox = By.xpath("//canvas[@width = '419']");//box to capture signature
 		//--------------------------------------------------------------------------------------------------------------------
-		By loginsettingslink = By.xpath("//div[@class = 'link-text'][text() = 'Login Settings']");//Login settings
+		By loginsettingslink = By.xpath("//div[@class = 'link-text'][text() = 'Login Preferences']");//Login settings
 		By loginsettingstitle = By.id("simple-modal-title");// title of login settings modal
 		By loginsettingscancelbtn = By.xpath("//span[text() = 'Cancel']");//cancel btn in login settings modal
 		By loginsettingssavebtn = By.xpath("//span[text() = 'Save']");//Save button in login settings modal

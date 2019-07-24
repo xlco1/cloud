@@ -39,14 +39,14 @@ public class LoginPage extends Base{
 	public WebDriver driver;
 
 	
-@Test(priority = 1)
+//@Test(priority = 1)
 public void loginNegative() throws IOException, InterruptedException
 	{
 		try {
 		driver = invokeBrowser();
 		driver.get("https://qa.crosslinkonline.com/#");
 		LogincloPO lp = new LogincloPO(driver);
-		lp.getusername().sendKeys(prop.getProperty("preparerlogin"));
+		lp.getusername().sendKeys(prop.getProperty("000334"));
 		lp.getPassword().sendKeys("password");
 		Thread.sleep(1000);
 		lp.clickLogin().click();
@@ -54,17 +54,15 @@ public void loginNegative() throws IOException, InterruptedException
 		System.out.println(invalidPassword.getText());
 		if(invalidPassword.getText().contains("Incorrect password"))
 		{
-		//System.out.println("Login Negative testcase passed" );
 		logger.info("Login Negative testcase passed");
 		test.log(LogStatus.INFO,"Login Negative testcase passed");
 		}
 		else
 		{
-			//System.out.println("Login Negative testcase failed" );
+			
 			logger.info("Login Negative testcase failed");
 			test.log(LogStatus.INFO,"Login Negative testcase failed");
-			
-		}
+			}
 		}
 		catch(Exception e) {
 			logger.error("Error in Login Negative" + e);
@@ -75,7 +73,7 @@ public void loginNegative() throws IOException, InterruptedException
 	}
 	
 
-@Test(priority = 2)
+//@Test(priority = 2)
 public void forgotPassword() throws IOException, InterruptedException
 {
 	try {
@@ -102,9 +100,11 @@ public void forgotPassword() throws IOException, InterruptedException
 	catch(Exception e) {
 	logger.error("Error in Forgot Password" + e);
 	test.log(LogStatus.ERROR, "Error in Forgot Password");
-	driver.quit();}
-}
+	}
+	driver.quit();
 	
+}
+
 
 @Test(priority = 3)
 public void loginPositive() throws IOException, InterruptedException
@@ -127,11 +127,9 @@ public void loginPositive() throws IOException, InterruptedException
     lp.clickcanceltour().click();
 	Thread.sleep(2000);
     op.clickoverview().click();
-    //System.out.println(op.clickoverview().getText());
    // logger.info(op.clickoverview().getText());
    assertTrue(op.clickoverview().getText().contains("Overview"));
-   //System.out.println("Login Positive testcase passed" );
-   logger.info("Login Positive testcase passed");
+   	logger.info("Login Positive testcase passed");
    test.log(LogStatus.INFO,"Login Positive testcase passed");
    Thread.sleep(1000);
 	}
@@ -160,14 +158,23 @@ public void loginPositive() throws IOException, InterruptedException
 		Thread.sleep(1000);
 		op.clickapptsendbtn().click();
 		Thread.sleep(2000);
-		//System.out.println(op.clickapptcreateddialog().getText());
-		logger.info(op.clickapptcreateddialog().getText());
-		//assertTrue(op.clickapptcreateddialog().getText().contains("The appointment was created successfully."));
-		//System.out.println("Create new appointment passed");
-		logger.info("Create new appointment passed");
-		test.log(LogStatus.INFO,"Create new appointment passed");
-		op.clickapptcreatedclsoebtn().click();
-		Thread.sleep(1000);
+		/*
+		 if(op.clickapptschconflictconfirmbtn().isDisplayed())
+		 
+		{
+			op.clickapptschconflictconfirmbtn().click();
+			op.clickapptcreatedclsoebtn().click();
+		}
+		
+		else {	//op.clickapptcreatedclsoebtn().click();
+			//Thread.sleep(1000);
+			//logger.info(op.clickapptcreateddialog().getText()); */
+		assertTrue(op.clickapptcreateddialog().getText().contains("The appointment was created successfully."));
+		//logger.info("Create new appointment passed");
+			op.clickapptcreatedclsoebtn().click();
+		//test.log(LogStatus.INFO,"Create new appointment passed");
+		//Thread.sleep(1000);
+		
 		}
 		catch(Exception e) {
 		logger.error("Error in Create new appointment" + e);
@@ -197,10 +204,8 @@ public void loginPositive() throws IOException, InterruptedException
 		op.clickapptsendbtn().click();
 		Thread.sleep(2000);
 		op.clickapptschconflictconfirmbtn().click();
-		//System.out.println(op.clickapptcreateddialog().getText());
 		logger.info(op.clickapptcreateddialog().getText());
 		//assertTrue(op.clickapptcreateddialog().getText().contains("The appointment was created successfully."));
-		//System.out.println("Create Second appointment passed");
 		logger.info("Create Second appointment passed");
 		test.log(LogStatus.INFO,"Create Second appointment passed");
 		op.clickapptcreatedclsoebtn().click();
@@ -230,13 +235,12 @@ public void loginPositive() throws IOException, InterruptedException
 		logger.info("Updated phonenumber");
 		op.clickapptscommentupdatemodal().clear();
 		op.clickapptscommentupdatemodal().sendKeys("comments updated");
-		System.out.println("updated comments");
+		//System.out.println("updated comments");
 		logger.info("updated comments");
 		op.clickapptupdatemodalbtn().click();
 		Thread.sleep(2000);
 		//System.out.println(op.clickapptcreateddialog().getText());
 		assertTrue(op.clickapptcreateddialog().getText().contains("The appointment was updated successfully."));
-		//System.out.println("Update appointment passed");
 		logger.info("Update appointment passed");
 		test.log(LogStatus.INFO,"Update appointment passed");
 		op.clickapptcloseupdatemodalbtn().click();
@@ -259,7 +263,6 @@ public void loginPositive() throws IOException, InterruptedException
 		op.clickapptdelconfirmbtn().click();
 		//System.out.println(op.clickapptcreateddialog().getText());
 		//assertTrue(op.clickapptcreateddialog().getText().contains("The appointment was deleted successfully."));
-		System.out.println("Delete appointment passed");
 		logger.info("Delete appointment passed");
 		test.log(LogStatus.INFO,"Delete appointment passed");
 		//op.clickapptclosedeletemodalbtn().click();
