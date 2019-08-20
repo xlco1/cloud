@@ -99,32 +99,13 @@ public class DatabaseSettings extends Base {
 	public void dbDeleteCity() throws IOException, InterruptedException
 	{
 		try {
-		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
-		Thread.sleep(1000);
-		WebElement frstRow = driver.findElement(By.xpath("//tr/td[text() = '12346']"));
 		Actions act = new Actions(driver);
 		act.moveToElement(dp.clickeditbtn()).moveToElement(dp.clickthreedots()).click().build().perform();
-		//dp.clickthreedots().click();
-<<<<<<< HEAD
-		Thread.sleep(3000);
-		WebElement delbtn = driver.findElement(By.cssSelector("#anchorDeleteButton"));
-				//By.xpath("//*[@id='anchorDeleteButton']/span"));//*[@id="anchorDeleteButton"]/span // #anchorDeleteButton
-		Thread.sleep(2000);
-		//delbtn.click();
+		Thread.sleep(1000);
 		act.moveToElement(driver.findElement(By.cssSelector("#anchorDeleteButton"))).click().perform();
-=======
-		Thread.sleep(2000);
-		act.moveToElement(driver.findElement(By.cssSelector("#anchorDeleteButton"))).click().perform();
-		//WebElement delbtn = driver.findElement(By.id("anchorDeleteButton"));
-		//delbtn.click();
-		
->>>>>>> 15e8764a95539d65b4722d57f2c5b0ed2c38d4e7
-		//dp.clickcitiesdeletebtn().click();
-		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		dp.clickcitiesdeletemodaldelbtn().click();
-		//System.out.println("City Deleted Successfully");
 		logger.info("City Deleted Successfully");
 		test.log(LogStatus.INFO,"City Deleted Successfully");
 		}
@@ -135,7 +116,7 @@ public class DatabaseSettings extends Base {
 	
 	}
 	
-	//@Test(priority = 25)
+	@Test(priority = 25)
 	public void dbaddEmployer() throws IOException, InterruptedException
 	{
 		try {
@@ -164,7 +145,7 @@ public class DatabaseSettings extends Base {
 		}
 	}
 	
-	//@Test(priority = 26)
+	@Test(priority = 26)
 	public void dbeditEmployer() throws IOException, InterruptedException
 	{
 		try {
@@ -216,7 +197,7 @@ public class DatabaseSettings extends Base {
 		}
 }
 	
-	//@Test(priority = 28)
+	@Test(priority = 28)
 	public void dbaddCareProvider() throws IOException, InterruptedException
 	{
 		try {
@@ -244,7 +225,7 @@ public class DatabaseSettings extends Base {
 		}
 		}
 	
-	//@Test(priority = 29)
+	@Test(priority = 29)
 	public void dbeditCareProvider() throws IOException, InterruptedException
 	{
 		try {
@@ -272,10 +253,8 @@ public class DatabaseSettings extends Base {
 	public void dbDeleteCareProvider() throws IOException, InterruptedException
 	{
 		try {
-		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
 		Thread.sleep(1000);
-		//WebElement frstRow = driver.findElement(By.xpath("//tr/td[text() = 'Test City Edited,CA']"));
 		Actions act = new Actions(driver);
 		act.moveToElement(dp.clickeditbtn()).moveToElement(dp.clickthreedots()).click().build().perform();
 		//dp.clickthreedots().click();
@@ -284,7 +263,6 @@ public class DatabaseSettings extends Base {
 		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
 		Thread.sleep(1000);
 		dp.clickcitiesdeletemodaldelbtn().click();
-		
 		logger.info("Care Provider Deleted Successfully");
 		test.log(LogStatus.INFO,"Care Provider Deleted Successfully");
 		}
@@ -294,11 +272,10 @@ public class DatabaseSettings extends Base {
 		}
 	}
 		
-	//@Test(priority = 31)
+	@Test(priority = 31)
 	public void dbaddReferrals() throws IOException, InterruptedException
 	{
 		try {
-		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
 		Thread.sleep(1000);
 		dp.clickreferralslink().click();
@@ -314,7 +291,7 @@ public class DatabaseSettings extends Base {
 		}
 	}
 	
-	//@Test(priority = 32)
+	@Test(priority = 32)
 	public void dbeditReferrals() throws IOException, InterruptedException
 	{
 		try {
@@ -365,7 +342,7 @@ public class DatabaseSettings extends Base {
 	}
 		
 	
-	//@Test(priority = 34)
+	@Test(priority = 34)
 	public void dbaddDonee() throws IOException, InterruptedException
 	{
 		
@@ -392,7 +369,7 @@ public class DatabaseSettings extends Base {
 		}
 	}
 	
-	//@Test(priority = 35)
+	@Test(priority = 35)
 	public void dbeditDonee() throws IOException, InterruptedException
 	{
 		try {
@@ -446,7 +423,7 @@ public class DatabaseSettings extends Base {
 	}
 		
 	
-	//@Test(priority = 37)
+	@Test(priority = 37)
 	public void dbaddBankRTN() throws IOException, InterruptedException
 	{
 		try {
@@ -467,7 +444,7 @@ public class DatabaseSettings extends Base {
 	}
 	}
 	
-	//@Test(priority = 38)
+	@Test(priority = 38)
 	public void dbeditBankRTN() throws IOException, InterruptedException
 	{
 		try {
@@ -516,7 +493,7 @@ public class DatabaseSettings extends Base {
 		}
 	}
 		
-	//@Test(priority = 40)
+	@Test(priority = 40)
 	public void dbaddOccupations() throws IOException, InterruptedException
 	{
 		try {
@@ -537,7 +514,7 @@ public class DatabaseSettings extends Base {
 	 
 	}
 	
-	//@Test(priority = 41)
+	@Test(priority = 41)
 	public void dbeditOccupations() throws IOException, InterruptedException
 	{
 		try {
@@ -584,7 +561,7 @@ public class DatabaseSettings extends Base {
 	}
 	}
 		
-	//@Test(priority = 43)
+	@Test(priority = 43)
 	public void dbaddEducationalInstitute() throws IOException, InterruptedException
 	{
 		try {
@@ -609,7 +586,7 @@ public class DatabaseSettings extends Base {
 		}
 	}
 	
-	//@Test(priority = 44)
+	@Test(priority = 44)
 	public void dbeditEducationalInstitute() throws IOException, InterruptedException
 	{
 		try {

@@ -210,7 +210,7 @@ public void loginSettings() throws IOException, InterruptedException
 	ap.clickloginsettingslink().click();
 	//System.out.println(ap.clickloginsettingsgstitle().getText());
 	logger.info(ap.clickloginsettingsgstitle().getText());
-	assertTrue(ap.clickloginsettingsgstitle().getText().contains("Login Settings"));
+	assertTrue(ap.clickloginsettingsgstitle().getText().contains("Login Preferences"));
 	ap.clickloginsetgscancelbtn().click();
 	logger.info("Login settings passed");
 	test.log(LogStatus.INFO,"Login settings Passed");
