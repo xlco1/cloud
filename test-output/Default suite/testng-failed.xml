@@ -3,16 +3,27 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="clo.LoginPage">
+      <class name="clo.AccountSettings">
         <methods>
+          <include name="captureSignature"/>
+          <include name="changePasswordCancel"/>
+          <include name="switchYear"/>
           <include name="teardown"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <include name="forgotPassword"/>
 =======
           <include name="newMessageSent"/>
 >>>>>>> 15e8764a95539d65b4722d57f2c5b0ed2c38d4e7
+=======
+          <include name="login"/>
+          <include name="changePassword"/>
+          <include name="loginSettings"/>
+          <include name="toggleTrainingModeOff"/>
+          <include name="toggleTrainingMode"/>
+>>>>>>> 61e0e3cc2c837cca0c80548d5680ec9ee42b44d1
         </methods>
-      </class> <!-- clo.LoginPage -->
+      </class> <!-- clo.AccountSettings -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

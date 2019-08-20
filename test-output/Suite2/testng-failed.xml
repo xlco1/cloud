@@ -3,10 +3,51 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite2]">
   <test thread-count="5" name="Test2(failed)">
     <classes>
+      <class name="clo.DatabaseSettings">
+        <methods>
+          <include name="dbDeleteReferrals"/>
+          <include name="dbDeleteEducationalInstitute"/>
+          <include name="dbAddCity"/>
+          <include name="dbDeleteDonee"/>
+          <include name="dbaddOccupations"/>
+          <include name="dbaddReferrals"/>
+          <include name="dbDeleteEmployer"/>
+          <include name="dbaddEmployer"/>
+          <include name="dbeditCareProvider"/>
+          <include name="dbeditBankRTN"/>
+          <include name="dbDeleteCity"/>
+          <include name="dbaddBankRTN"/>
+          <include name="dbDeleteOccupations"/>
+          <include name="dbaddDonee"/>
+          <include name="dbeditEmployer"/>
+          <include name="dbDeleteBankRTN"/>
+          <include name="dbeditOccupations"/>
+          <include name="dbeditEducationalInstitute"/>
+          <include name="dbEditCity"/>
+          <include name="dbeditDonee"/>
+          <include name="dbaddCareProvider"/>
+          <include name="teardown"/>
+          <include name="dbaddEducationalInstitute"/>
+          <include name="dbeditReferrals"/>
+          <include name="login"/>
+          <include name="dbDeleteCareProvider"/>
+        </methods>
+      </class> <!-- clo.DatabaseSettings -->
       <class name="clo.AccountSettings">
         <methods>
+          <include name="captureSignature"/>
+          <include name="changePasswordCancel"/>
+          <include name="switchYear"/>
           <include name="teardown"/>
+<<<<<<< HEAD
           <include name="loginSettings"/>
+=======
+          <include name="login"/>
+          <include name="changePassword"/>
+          <include name="loginSettings"/>
+          <include name="toggleTrainingModeOff"/>
+          <include name="toggleTrainingMode"/>
+>>>>>>> 61e0e3cc2c837cca0c80548d5680ec9ee42b44d1
         </methods>
       </class> <!-- clo.AccountSettings -->
     </classes>
