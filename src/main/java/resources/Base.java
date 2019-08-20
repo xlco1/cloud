@@ -22,6 +22,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -40,7 +41,8 @@ public class Base {
 	public ExtentReports report;
 	public ExtentTest test;
 	public String filename;
-	
+	public static WebDriverWait Wait;
+	//Wait = new WebDriverWait(driver,10);
 	public WebDriver invokeBrowser() throws IOException
 	{
 		

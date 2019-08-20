@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
@@ -29,6 +30,7 @@ public class DatabaseSettings extends Base {
 	public void dbAddCity() throws IOException, InterruptedException
 	{
 		try {
+		/*
 		driver = invokeBrowser();
 		driver.get("https://qa.crosslinkonline.com/#");
 		LogincloPO lp = new LogincloPO(driver);
@@ -40,10 +42,10 @@ public class DatabaseSettings extends Base {
 		lp.clicksecLogin().click();
 		lp.clickmarkaspublic().click();
 		lp.clickthrdcontbtn().click();
-	    lp.clickcontbtnIRS().click();
-	    lp.clickcanceltour().click();
+	    //lp.clickcontbtnIRS().click();
+	    //lp.clickcanceltour().click();
 		Thread.sleep(2000);
-	    op.clickoverview().click();
+	    op.clickoverview().click();*/
 	    Thread.sleep(1000);
 		AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);
@@ -341,11 +343,12 @@ public class DatabaseSettings extends Base {
 		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
 		Thread.sleep(1000);
 		dp.clickcitiesdeletemodaldelbtn().click();
-		WebElement donebtn = driver.findElement(By.id("btnHideSettingsError"));
+		//WebElement donebtn = driver.findElement(By.id("btnHideSettingsError"));
+		/*
 		if(donebtn.isDisplayed())
 		{
 			donebtn.click();
-		}
+		}*/
 		logger.info(" Referrals Deleted Successfully");
 		test.log(LogStatus.INFO,"Referrals Deleted Successfully");
 		}
@@ -653,6 +656,33 @@ public class DatabaseSettings extends Base {
 		test.log(LogStatus.ERROR, "Error in Delete DB Eduational Institute");
 	}
 	}	
+	@BeforeClass
+	public void login() throws IOException, InterruptedException
+	{
+		driver= invokeBrowser();
+		driver.get(prop.getProperty("url"));
+		logger.info("URL open-Success");
+		LogincloPO lp = new LogincloPO(driver);
+		lp.getusername().sendKeys(prop.getProperty("preparerlogin1"));
+		lp.getPassword().sendKeys(prop.getProperty("preparerpswd1"));
+		Thread.sleep(1000);
+		lp.clickLogin().click();
+		logger.info("Username and Password success");
+		OverviewpgPO op = new OverviewpgPO(driver);
+		//Thread.sleep(1000);-----------------1st change
+		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		//WebDriverWait wait = new WebDriverWait(driver,10);
+		//wait.until(ExpectedConditions.elementToBeClickable(lp.clicksecLogin()));
+		lp.clicksecLogin().click();
+		logger.info("clicked secLogin");
+		lp.clickmarkaspublic().click();
+		logger.info("Clicked markaspublic");
+		lp.clickthrdcontbtn().click();
+		logger.info("clicked thirdcontbtn");
+		Thread.sleep(2000);
+	    op.clickoverview().click();
+		
+	}
 	
 	@AfterClass
 	public void teardown()

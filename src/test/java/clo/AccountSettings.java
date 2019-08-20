@@ -11,7 +11,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
@@ -32,6 +35,7 @@ public class AccountSettings extends Base {
 public void switchYear() throws IOException, InterruptedException
 {
 	try {
+	/*	
 	driver = invokeBrowser();
 	driver.get("https://qa.crosslinkonline.com/#");
 	LogincloPO lp = new LogincloPO(driver);
@@ -43,11 +47,11 @@ public void switchYear() throws IOException, InterruptedException
 	lp.clicksecLogin().click();
 	lp.clickmarkaspublic().click();
 	lp.clickthrdcontbtn().click();
-    lp.clickcontbtnIRS().click();
-    lp.clickcanceltour().click();
+   // lp.clickcontbtnIRS().click();
+   // lp.clickcanceltour().click();
 	Thread.sleep(2000);
     op.clickoverview().click();
-    
+    */
     Thread.sleep(1000);
 	AccountSettingsPO ap = new AccountSettingsPO(driver);
 	Thread.sleep(2000);
@@ -210,7 +214,7 @@ public void loginSettings() throws IOException, InterruptedException
 	ap.clickloginsettingslink().click();
 	//System.out.println(ap.clickloginsettingsgstitle().getText());
 	logger.info(ap.clickloginsettingsgstitle().getText());
-	assertTrue(ap.clickloginsettingsgstitle().getText().contains("Login Settings"));
+	assertTrue(ap.clickloginsettingsgstitle().getText().contains("Login Preferences"));
 	ap.clickloginsetgscancelbtn().click();
 	logger.info("Login settings passed");
 	test.log(LogStatus.INFO,"Login settings Passed");
@@ -221,7 +225,34 @@ catch(Exception e) {
 }
 	//driver.quit();
 }
-
+@BeforeClass
+public void login() throws IOException, InterruptedException
+{
+	driver= invokeBrowser();
+	driver.get(prop.getProperty("url"));
+	logger.info("URL open-Success");
+	LogincloPO lp = new LogincloPO(driver);
+	lp.getusername().sendKeys(prop.getProperty("preparerlogin1"));
+	lp.getPassword().sendKeys(prop.getProperty("preparerpswd1"));
+	Thread.sleep(1000);
+	lp.clickLogin().click();
+	logger.info("Username and Password success");
+	OverviewpgPO op = new OverviewpgPO(driver);
+	//Thread.sleep(1000);-----------------1st change
+	//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+	//WebDriverWait wait = new WebDriverWait(driver,10);
+	//wait.until(ExpectedConditions.elementToBeClickable(lp.clicksecLogin()));
+	lp.clicksecLogin().click();
+	logger.info("clicked secLogin");
+	lp.clickmarkaspublic().click();
+	logger.info("Clicked markaspublic");
+	lp.clickthrdcontbtn().click();
+	logger.info("clicked thirdcontbtn");
+	Thread.sleep(2000);
+    op.clickoverview().click();
+	
+}
+	//lp.clickcontbtnIRS().click();
 @AfterClass
 public void teardown()
 {
