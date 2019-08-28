@@ -32,7 +32,8 @@ public class OverviewpgPO {
 	//-------------------------------
 	By onetaxretrn = By.id("btnOpenTaxReturnTRList9");
 	By continueinataxrtn = By.id("btnContinueReturnProfile");
-	//---------------------------------------------
+	//-------------------------------------------------------Calendar-----------------------------------------------------------------------------------------------------------
+	
 	By appticonbtn = By.id("btnSideBar1");//appointment icon left menu
 	By newappointmentbtn = By.id("btnNewAppointmentAppointments");//newappointment button
 	By apptfirstname =By.id("txtFirstNameApptModal");//firstname in create new appointment
@@ -58,7 +59,12 @@ public class OverviewpgPO {
 	By apptdelconfirmbtn = By.id("btnConfirmDialog");//Delete appt confirm button
 	By apptdelcancelbtn = By.id("btnCancelDialog");//Delete appt cancel button
 	By apptclosedeletemodalbtn = By.id("btnHideAppointmentDeletedModal");//close button in appt delete dialog
-	//-------------------------------------------------------------------------------------------------
+	By apptdatetxtbx = By.id("btnDate");// date text box in create appt modal
+	By apptstarttime = By.id("btnStartTime");// start time text box in create appt modal
+	By apptendtime = By.id("btnEndTime");//End time text box in create appt modal
+	By apptsttime7am = By.xpath("//li[text() = '07:00 AM']");// start time 7 am
+	By apptpasttimemesg = By.xpath("//p[text() = 'Time is in the past']"); //Time is past error message
+	//------------------------------------------Messages-------------------------------------------------------
 	By notificonbtn = By.id("btnSideBar2");//Notifications icon in the left menu
 	By notifnewmesgbtn = By.id("btnNewMessageMessages");//New Message button in the Notifications page
 	By notifpreparerdropdown = By.xpath("//*[@id='newMessageModalMessages']/div[2]/div/form/div[1]/span/div[2]/div/div/div");//Preparer dropdown in Create mesg dialog
@@ -74,7 +80,7 @@ public class OverviewpgPO {
 	By notifdeletebtn = By.id("btnDeleteMessage");//Delete message button
 	By notifdelmesgdialog = By.id("confirm-delete-message-desc");//Delete message popup
 	By notifdelmesgdialogyesbtn = By.id("btnYesConfirmDeleteMessage");//Yes button in del mesg popup
-	//-----------------------------------------------------------------------------------
+	//-------------------------------------Checks----------------------------------------------
 	By chksiconbtn = By.id("btnSideBar3");//checks icon button on the left menu
 	By chkstestprintbtn = By.xpath("//span[text() ' Test Print']");// Test Print btn in checks page
 	By chkstestprintcancelbtn = By.className("cancel-button");// cancel btn  on test print dialog
@@ -87,7 +93,7 @@ public class OverviewpgPO {
 	By chksprintchecksdialog = By.xpath("//h2[text()= 'Print Checks']");//Print Checks(text) from pop up 
 	By chksreprintchecksdialog = By.xpath("//h2[text()= 'Check Reprint']");// Check Reprint(text) from pop up
 	By chksselectallchkbox = By.xpath("//input[@type ='checkbox']");//select all check box
-	By chkscheckregistertab = By.id("spnTitleTab1");// check Register tab
+	By chkscheckregistertab = By.xpath("//*[@id='spnTitleTab1']/a");// check Register tab
 	//By chkschkregfirstchkbox = By.xpath(("//input[@type = 'Checkbox']")[1]);//first checkbox in checks register
 	By chksreprintbtn = By.xpath("//span[text() = 'Reprint']");
 	By chksthreedotsonhover = By.xpath("//img[@src = '/images/icons/menu_vertical.png']");//three dots on hover
@@ -265,6 +271,27 @@ public class OverviewpgPO {
 	{
 		return driver.findElement(apptdelcancelbtn);
 	}
+	public WebElement clickapptdatetxtbox()
+	{
+		return driver.findElement(apptdatetxtbx);
+	}
+	public WebElement clickapptstarttime()
+	{
+		return driver.findElement(apptstarttime);
+	}
+	public WebElement clickapptendtime()
+	{
+		return driver.findElement(apptendtime);
+	}
+	public WebElement clickapptsttime7am()
+	{
+		return driver.findElement(apptsttime7am);
+	}
+	public WebElement clickapptpasttimemesg()
+	{
+		return driver.findElement(apptpasttimemesg);
+	}
+	
 	//-----------------------------------
 
 	public WebElement clicknotificonbtn()
