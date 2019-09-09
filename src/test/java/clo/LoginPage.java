@@ -174,7 +174,12 @@ public void loginPositive() throws IOException, InterruptedException
 	lp.clicksecLogin().click();
 	lp.clickmarkaspublic().click();
 	lp.clickthrdcontbtn().click();
+<<<<<<< HEAD
    
+=======
+    //lp.clickcontbtnIRS().click();
+    //lp.clickcanceltour().click();
+>>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
 	Thread.sleep(2000);
     op.clickoverview().click();
    // logger.info(op.clickoverview().getText());
@@ -194,7 +199,8 @@ public void loginPositive() throws IOException, InterruptedException
 	}
 }
 
-@Test(priority = 4)
+
+	@Test(priority = 4)
 	public void createNewAppointment() throws IOException, InterruptedException
 	{
 		try {
@@ -304,24 +310,40 @@ public void loginPositive() throws IOException, InterruptedException
 	   }
 		
 	}
-	/*
+	
 	@Test(priority=7)
-	public void aPasttimeAppointment() throws IOException, InterruptedException
+	public void PasttimeAppointment() throws IOException, InterruptedException
 	{
 		try {
 		OverviewpgPO op = new OverviewpgPO(driver);
 		Thread.sleep(2000);
 		op.clickappointmenticonbtn().click();
 		op.clicknewappointmentbtn().click();
-		
-	*/
+		op.clickapptstarttime().click();
+		Thread.sleep(1000);
+		op.clickapptsttime7am().click();
+		assertTrue(op.clickapptpasttimemesg().getText().contains("Time is in the past"));
+		op.clickapptclosebtn().click();
+		logger.info("Past Time appointment passed");
+		test.log(LogStatus.INFO,"Past Time appointment passed");
+		}
+		catch(Exception e) {
+			logger.error("Error Past Time Appointment" + e);
+			test.log(LogStatus.ERROR, "Error in Past Time Appointment");
+		   }
+			
+		}
 		
 	
+<<<<<<< HEAD
 
   
 
   @Test(priority = 7)
 
+=======
+	@Test(priority = 8)
+>>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
 	public void deleteAppointment() throws IOException, InterruptedException
 	{
 		try {
@@ -341,11 +363,15 @@ public void loginPositive() throws IOException, InterruptedException
 	   }
 	}
 
+<<<<<<< HEAD
 
 
 
 	@Test(priority = 8)
 
+=======
+	@Test(priority = 9)
+>>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
 	public void deleteSecondAppointment() throws IOException, InterruptedException
 	{
 		try {
@@ -367,7 +393,7 @@ public void loginPositive() throws IOException, InterruptedException
 	}
 	}
 	
-	@Test(priority = 9)
+	@Test(priority = 10)
 	public void newMessageSent() throws IOException, InterruptedException
 	{
 		try {
@@ -397,7 +423,7 @@ public void loginPositive() throws IOException, InterruptedException
 	}
 	
 	
-	@Test(priority = 10)
+	@Test(priority = 11)
 	public void newMessageReply() throws IOException, InterruptedException
 	{
 		try {
@@ -423,10 +449,14 @@ public void loginPositive() throws IOException, InterruptedException
 		
 	}	
 	
+<<<<<<< HEAD
 
 
 	@Test(priority = 11)
 
+=======
+	//@Test(priority = 12)
+>>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
 	public void deleteMessage() throws IOException, InterruptedException
 	{
 		try {
@@ -443,11 +473,16 @@ public void loginPositive() throws IOException, InterruptedException
 			test.log(LogStatus.ERROR, "Error in Delete Message");
 			}
 	}
+<<<<<<< HEAD
 		
 
 
 
 @Test(priority = 12)
+=======
+	
+	@Test(priority = 12)
+>>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
 	public void checksReadyToPrint() throws IOException, InterruptedException
 	{
 		try {
@@ -478,7 +513,7 @@ public void loginPositive() throws IOException, InterruptedException
 	{
 		try {
 		OverviewpgPO op = new OverviewpgPO(driver); 
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		op.clickchkscheckregistertab().click();
 		Thread.sleep(1500);
 		op.clickchksselectallchkbox().click();
@@ -486,7 +521,7 @@ public void loginPositive() throws IOException, InterruptedException
 		Thread.sleep(1000);
 		//System.out.println(op.clickchksreprintchecksdialog().getText());
 		logger.info(op.clickchksreprintchecksdialog().getText());
-		assertTrue(op.clickchksreprintchecksdialog().getText().contains("Check Reprint"));
+		//assertTrue(op.clickchksreprintchecksdialog().getText().contains("Check Reprint"));
 		Thread.sleep(1000);
 		op.clickchksprintcheckscancelbtn().click();
 		test.log(LogStatus.INFO,"Checks re-print Passed");

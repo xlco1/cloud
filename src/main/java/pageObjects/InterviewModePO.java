@@ -34,7 +34,7 @@ By intvSPdob = By.id("SDOB00");//SP's dob
 By intvSPoccuaption = By.id("132700");//SP's occupation
 By intvperinfopgNextbtn = By.id("Z0204745");// Next btn in Personal information page
 
-//--------------------------------------Address Information----------------------------------------------------------------------
+//--------------------------------------Address Information--------------------------------------------------------------------
 By intvusaddress = By.id("dadd00");// US add field
 By intvcity = By.id("dcty00");// city field
 By intvstate = By.id("dsta00");//state field
@@ -99,7 +99,7 @@ public WebElement clickintviconpgNextbtn()
 {
 	return driver.findElement(intviconpgNextbtn);
 }
-//----------------------------------------------------Filling Status-------------------------------------------------------------------------------------------------------------
+//------------------------------------------------Filling Status-------------------------------------------------------------------------------------------------------------
 public WebElement clickintvMFJbox()
 {
 	return driver.findElement(intvMFJbox);
@@ -108,7 +108,7 @@ public WebElement clickintvFSpgNextbtn()
 {
 	return driver.findElement(intvFSpgNextbtn);
 }
-//-----------------------------------------------------Personal Information Page------------------------------------------------------------------------------------------------------
+//-------------------------------------------Personal Information Page------------------------------------------------------------------------------------------------------
 public WebElement clickintvTPfirstname()
 {
 	return driver.findElement(intvTPfirstname);
@@ -149,7 +149,7 @@ public WebElement clickintvperinfopgNextbtn()
 {
 	return driver.findElement(intvperinfopgNextbtn);
 }
-//-------------------------------------------------------------Address Information-----------------------------------------------------------------------------------------------------
+//--------------------------------------------Address Information-----------------------------------------------------------------------------------------------------
 public WebElement clickintvusaddress()
 {
 	return driver.findElement(intvusaddress);
@@ -174,12 +174,12 @@ public WebElement clickaddinfopgNextbtn()
 {
 	return driver.findElement(intvaddinfopgNextbtn);
 }
-//-----------------------------------------------------------Additional personal information-----------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------Additional personal information-----------------------------------------------------------------------------------------------------------------------------
 public WebElement clickintvadditionalinfopgNextbtn()
 {
 	return driver.findElement(intvadditionalperinfopgNextbtn);
 }
-//------------------------------------------------------------Dependents--------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------Dependents--------------------------------------------------------------------------------------------------------------
 public WebElement clickintvyesdepstoclaim()
 {
 	return driver.findElement(intvyesdepstoclaim);
@@ -192,7 +192,7 @@ public WebElement clickintvdepspgNextbtn()
 {
 	return driver.findElement(intvdepspgNextbtn);
 }
-//----------------------------------------------------------------------Type of Income---------------------------------------------------------------------------------------------
+//--------------------------------------------Type of Income---------------------------------------------------------------------------------------------
 public WebElement clickintvaddTPW2frmbtn()
 {
 	return driver.findElement(intvaddTPW2frmbtn);
@@ -201,22 +201,22 @@ public WebElement clickintvtypofincNextbtn()
 {
 	return driver.findElement(intvtypofincNextbtn);
 }
-//---------------------------------------------------------------------W2 Form-----------------------------------------------------------------
+//------------------------------------------------W2 Form-----------------------------------------------------------------
 public WebElement clickintvW2frmNextbtn()
 {
 	return driver.findElement(intvW2frmNextbtn);
 }
-//-------------------------------------------------------------------Adjustments/Deductions Interview----------------------------------------------------------------------------------------------------------
+//-------------------------------------Adjustments/Deductions Interview----------------------------------------------------------------------------------------------------------
 public WebElement clickintvadjustmentspgNextbtn()
 {
 	return driver.findElement(intvadjustmentspgNextbtn);
 }
-//----------------------------------------------------------------------------Credits-----------------------------------------------------------------------------------------------
+//-----------------------------------------------Credits-----------------------------------------------------------------------------------------------
 public WebElement clickintvcreditspgNextbtn()
 {
 	return driver.findElement(intvcreditspgNextbtn);
 }
-//--------------------------------------------------------------------------Health care coverage---------------------------------------------------------------------------------------------------------------
+//----------------------------------------Health care coverage---------------------------------------------------------------------------------------------------------------
 public WebElement clickintvhealthemployer()
 {
 	return driver.findElement(intvhealthemployer);
@@ -225,17 +225,17 @@ public WebElement clickintvhealthpgNextbtn()
 {
 	return driver.findElement(intvhealthpgNextbtn);
 }
-//-------------------------------------------------------------------------Other Misc-------------------------------------------------------------------------------------------------------------
+//--------------------------------------------Other Misc-------------------------------------------------------------------------------------------------------------
 public WebElement clickintvmiscpgNextbtn()
 {
 	return driver.findElement(intvmiscpgNextbtn);
 }
-//-------------------------------------------------------------------------State Returns-------------------------------------------------------------------------------------------------------
+//------------------------------------------State Returns-------------------------------------------------------------------------------------------------------
 public WebElement clickintvstateretpgNextbtn()
 {
 	return driver.findElement(intvstateretpgNextbtn);
 }
-//------------------------------------------------------------------------Filing Options-----------------------------------------------------------------------------------------------
+//-----------------------------------------Filing Options-----------------------------------------------------------------------------------------------
 public WebElement clickintvRTfinprod()
 {
 	return driver.findElement(intvRTfinprod);
