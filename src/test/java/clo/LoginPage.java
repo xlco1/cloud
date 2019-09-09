@@ -174,8 +174,7 @@ public void loginPositive() throws IOException, InterruptedException
 	lp.clicksecLogin().click();
 	lp.clickmarkaspublic().click();
 	lp.clickthrdcontbtn().click();
-    lp.clickcontbtnIRS().click();
-    lp.clickcanceltour().click();
+   
 	Thread.sleep(2000);
     op.clickoverview().click();
    // logger.info(op.clickoverview().getText());
