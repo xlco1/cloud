@@ -12,9 +12,9 @@ public class AccountSettingsPO {
 		By accountsdropdown = By.id("spnAccountProfileTitleBar");//account dropdown on top right
 		By switchlink = By.xpath("//div[@class = 'link-text'][text() = 'Switch']");//Switch year link
 		By switchselectyeardropdown = By.xpath("//Select[@name = 'season']");// select year dropdown in switch account modal
-		By switchoptionyear2018 = By.xpath("//option[@value = '2018']");// select year 2017 from the dropdown
+		By switchoptionyear2017 = By.xpath("//option[@value = '2018']");// select year 2017 from the dropdown
 		By switchbtn = By.id("btnDoSwtichAccount");//switch button in the switch account modal
-		By switchoptionyear2019 = By.xpath("//option[@value = '2019']");// select year 2018 from the dropdown
+		By switchoptionyear2018 = By.xpath("//option[@value = '2019']");// select year 2018 from the dropdown
 		By switchcancelbtn = By.id("btnCancelSwtichAccount");// Cancel button in the switch modal
 		//-----------------------------------------------------------------------------------------------------
 		By changepasswordlink = By.xpath("//div[@class = 'link-text'][text() = 'Change Password']");// change password link
@@ -51,17 +51,17 @@ public class AccountSettingsPO {
 		{
 			return driver.findElement(switchselectyeardropdown);
 		}
-		public WebElement clickswitchoptionyear2018()
+		public WebElement clickswitchoptionyear2017()
 		{
-			return driver.findElement(switchoptionyear2018);
+			return driver.findElement(switchoptionyear2017);
 		}
 		public WebElement clickswitchbtn()
 		{
 			return driver.findElement(switchbtn);
 		}
-		public WebElement clickswitchoptionyear2019()
+		public WebElement clickswitchoptionyear2018()
 		{
-			return driver.findElement(switchoptionyear2019);
+			return driver.findElement(switchoptionyear2018);
 		}
 		public WebElement clickswitchcancelbtn()
 		{

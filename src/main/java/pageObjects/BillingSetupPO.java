@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class BillingSetupPO {
-	public WebDriver driver;
+	public static WebDriver driver;
 	public BillingSetupPO(WebDriver driver) {
 		this.driver=driver;
 		}

@@ -316,7 +316,7 @@ public class DatabaseSettings extends Base {
 		Thread.sleep(1000);
 		dp.clickeditbtn().click();
 		dp.clickreferralsname().clear();
-		dp.clickreferralsname().sendKeys("Refferals Updated");
+		dp.clickreferralsname().sendKeys("12354");
 		dp.clickreferralsaddbtn().click();
 		logger.info(" Refferrals editted successfully");
 		test.log(LogStatus.INFO,"Refferrals editted successfully");

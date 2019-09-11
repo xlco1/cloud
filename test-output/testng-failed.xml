@@ -1,38 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite2]">
-  <test thread-count="5" name="Test2(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="clo.DatabaseSettings">
-        <methods>
-          <include name="dbDeleteReferrals"/>
-          <include name="dbDeleteEducationalInstitute"/>
-          <include name="dbAddCity"/>
-          <include name="dbDeleteDonee"/>
-          <include name="dbaddOccupations"/>
-          <include name="dbaddReferrals"/>
-          <include name="dbDeleteEmployer"/>
-          <include name="dbaddEmployer"/>
-          <include name="dbeditCareProvider"/>
-          <include name="dbeditBankRTN"/>
-          <include name="dbDeleteCity"/>
-          <include name="dbaddBankRTN"/>
-          <include name="dbDeleteOccupations"/>
-          <include name="dbaddDonee"/>
-          <include name="dbeditEmployer"/>
-          <include name="dbDeleteBankRTN"/>
-          <include name="dbeditOccupations"/>
-          <include name="dbeditEducationalInstitute"/>
-          <include name="dbEditCity"/>
-          <include name="dbeditDonee"/>
-          <include name="dbaddCareProvider"/>
-          <include name="teardown"/>
-          <include name="dbaddEducationalInstitute"/>
-          <include name="dbeditReferrals"/>
-          <include name="login"/>
-          <include name="dbDeleteCareProvider"/>
-        </methods>
-      </class> <!-- clo.DatabaseSettings -->
       <class name="clo.AccountSettings">
         <methods>
           <include name="captureSignature"/>
@@ -47,5 +17,5 @@
         </methods>
       </class> <!-- clo.AccountSettings -->
     </classes>
-  </test> <!-- Test2(failed) -->
-</suite> <!-- Failed suite [Suite2] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
