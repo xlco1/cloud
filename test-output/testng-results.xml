@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" ignored="0" total="24" passed="24">
+=======
+<<<<<<< HEAD
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite2" duration-ms="20981" started-at="2019-08-20T18:05:06Z" finished-at="2019-08-20T18:05:27Z">
+    <groups>
+    </groups>
+    <test name="Test2" duration-ms="20981" started-at="2019-08-20T18:05:06Z" finished-at="2019-08-20T18:05:27Z">
+      <class name="clo.LoginPage">
+        <test-method status="PASS" signature="loginPositive()[pri:3, instance:clo.LoginPage@3c41ed1d]" name="loginPositive" duration-ms="20949" started-at="2019-08-20T18:05:06Z" finished-at="2019-08-20T18:05:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPositive -->
+=======
+<testng-results skipped="0" failed="0" ignored="0" total="43" passed="43">
+>>>>>>> d0287f84589562a0e8382db6a70aa98568174b94
   <reporter-output>
   </reporter-output>
   <suite name="Default suite" duration-ms="73562" started-at="2019-09-11T17:34:17Z" finished-at="2019-09-11T17:35:31Z">
@@ -112,6 +130,66 @@
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- clo.DatabaseSettings -->
+<<<<<<< HEAD
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+=======
+      <class name="clo.LoginPage">
+        <test-method status="PASS" signature="loginPositive()[pri:3, instance:clo.LoginPage@292b08d6]" name="loginPositive" duration-ms="10967" started-at="2019-08-28T20:26:44Z" finished-at="2019-08-28T20:26:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPositive -->
+        <test-method status="PASS" signature="createNewAppointment()[pri:4, instance:clo.LoginPage@292b08d6]" name="createNewAppointment" duration-ms="6882" started-at="2019-08-28T20:26:55Z" finished-at="2019-08-28T20:27:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewAppointment -->
+        <test-method status="PASS" signature="createApptSameTime()[pri:5, instance:clo.LoginPage@292b08d6]" name="createApptSameTime" duration-ms="8336" started-at="2019-08-28T20:27:02Z" finished-at="2019-08-28T20:27:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createApptSameTime -->
+        <test-method status="PASS" signature="updateAppointment()[pri:6, instance:clo.LoginPage@292b08d6]" name="updateAppointment" duration-ms="6129" started-at="2019-08-28T20:27:10Z" finished-at="2019-08-28T20:27:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateAppointment -->
+        <test-method status="PASS" signature="PasttimeAppointment()[pri:7, instance:clo.LoginPage@292b08d6]" name="PasttimeAppointment" duration-ms="3547" started-at="2019-08-28T20:27:16Z" finished-at="2019-08-28T20:27:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PasttimeAppointment -->
+        <test-method status="PASS" signature="deleteAppointment()[pri:8, instance:clo.LoginPage@292b08d6]" name="deleteAppointment" duration-ms="1150" started-at="2019-08-28T20:27:20Z" finished-at="2019-08-28T20:27:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAppointment -->
+        <test-method status="PASS" signature="deleteSecondAppointment()[pri:9, instance:clo.LoginPage@292b08d6]" name="deleteSecondAppointment" duration-ms="2130" started-at="2019-08-28T20:27:21Z" finished-at="2019-08-28T20:27:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSecondAppointment -->
+        <test-method status="PASS" signature="newMessageSent()[pri:10, instance:clo.LoginPage@292b08d6]" name="newMessageSent" duration-ms="4498" started-at="2019-08-28T20:27:23Z" finished-at="2019-08-28T20:27:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newMessageSent -->
+        <test-method status="PASS" signature="newMessageReply()[pri:11, instance:clo.LoginPage@292b08d6]" name="newMessageReply" duration-ms="3747" started-at="2019-08-28T20:27:28Z" finished-at="2019-08-28T20:27:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newMessageReply -->
+        <test-method status="PASS" signature="checksReadyToPrint()[pri:12, instance:clo.LoginPage@292b08d6]" name="checksReadyToPrint" duration-ms="4744" started-at="2019-08-28T20:27:31Z" finished-at="2019-08-28T20:27:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checksReadyToPrint -->
+        <test-method status="PASS" signature="checksRegister()[pri:13, instance:clo.LoginPage@292b08d6]" name="checksRegister" duration-ms="6585" started-at="2019-08-28T20:27:36Z" finished-at="2019-08-28T20:27:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checksRegister -->
+        <test-method status="PASS" signature="voidCheck()[pri:14, instance:clo.LoginPage@292b08d6]" name="voidCheck" duration-ms="1777" started-at="2019-08-28T20:27:43Z" finished-at="2019-08-28T20:27:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- voidCheck -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:clo.LoginPage@292b08d6]" name="teardown" is-config="true" duration-ms="2281" started-at="2019-08-28T20:27:44Z" finished-at="2019-08-28T20:27:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+>>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
+      </class> <!-- clo.LoginPage -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite2 -->
+>>>>>>> d0287f84589562a0e8382db6a70aa98568174b94
 </testng-results>

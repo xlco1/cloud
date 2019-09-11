@@ -9,11 +9,28 @@
           <include name="changePasswordCancel"/>
           <include name="switchYear"/>
           <include name="teardown"/>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <include name="forgotPassword"/>
+=======
+          <include name="newMessageSent"/>
+>>>>>>> 15e8764a95539d65b4722d57f2c5b0ed2c38d4e7
+=======
+>>>>>>> d0287f84589562a0e8382db6a70aa98568174b94
           <include name="login"/>
           <include name="changePassword"/>
           <include name="loginSettings"/>
           <include name="toggleTrainingModeOff"/>
           <include name="toggleTrainingMode"/>
+<<<<<<< HEAD
+=======
+>>>>>>> 61e0e3cc2c837cca0c80548d5680ec9ee42b44d1
+=======
+>>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
+>>>>>>> d0287f84589562a0e8382db6a70aa98568174b94
         </methods>
       </class> <!-- clo.AccountSettings -->
     </classes>

@@ -101,23 +101,13 @@ public class DatabaseSettings extends Base {
 	public void dbDeleteCity() throws IOException, InterruptedException
 	{
 		try {
-		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
-		Thread.sleep(1000);
-		WebElement frstRow = driver.findElement(By.xpath("//tr/td[text() = '12346']"));
 		Actions act = new Actions(driver);
 		act.moveToElement(dp.clickeditbtn()).moveToElement(dp.clickthreedots()).click().build().perform();
-		//dp.clickthreedots().click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		act.moveToElement(driver.findElement(By.cssSelector("#anchorDeleteButton"))).click().perform();
-		//WebElement delbtn = driver.findElement(By.id("anchorDeleteButton"));
-		//delbtn.click();
-		
-		//dp.clickcitiesdeletebtn().click();
-		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
 		Thread.sleep(1000);
 		dp.clickcitiesdeletemodaldelbtn().click();
-		//System.out.println("City Deleted Successfully");
 		logger.info("City Deleted Successfully");
 		test.log(LogStatus.INFO,"City Deleted Successfully");
 		}
@@ -265,10 +255,8 @@ public class DatabaseSettings extends Base {
 	public void dbDeleteCareProvider() throws IOException, InterruptedException
 	{
 		try {
-		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
 		Thread.sleep(1000);
-		//WebElement frstRow = driver.findElement(By.xpath("//tr/td[text() = 'Test City Edited,CA']"));
 		Actions act = new Actions(driver);
 		act.moveToElement(dp.clickeditbtn()).moveToElement(dp.clickthreedots()).click().build().perform();
 		//dp.clickthreedots().click();
@@ -277,7 +265,6 @@ public class DatabaseSettings extends Base {
 		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
 		Thread.sleep(1000);
 		dp.clickcitiesdeletemodaldelbtn().click();
-		
 		logger.info("Care Provider Deleted Successfully");
 		test.log(LogStatus.INFO,"Care Provider Deleted Successfully");
 		}
@@ -291,7 +278,6 @@ public class DatabaseSettings extends Base {
 	public void dbaddReferrals() throws IOException, InterruptedException
 	{
 		try {
-		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
 		Thread.sleep(1000);
 		dp.clickreferralslink().click();
@@ -688,7 +674,7 @@ public class DatabaseSettings extends Base {
 	public void teardown()
 	{
 	 logger.info("in tear down");
-		driver.close();
+		//driver.close();
 		report.endTest(test);
 		report.flush();
 	} 
