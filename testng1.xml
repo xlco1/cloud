@@ -7,8 +7,7 @@
 	
 	<class name="clo.DatabaseSettings" />
       <class name="clo.LoginPage"/>
-<!-- <class name="clo.SettingsChanges"/>
-      <class name="clo.DatabaseSettings"/> -->
+
    	 <class name = "clo.AccountSettings"/>
    	 <class name = "clo.DatabaseSettings"/>
 

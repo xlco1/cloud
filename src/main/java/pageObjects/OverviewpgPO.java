@@ -34,7 +34,7 @@ public class OverviewpgPO {
 	By continueinataxrtn = By.id("btnContinueReturnProfile");
 	//-------------------------------------------------------Calendar-----------------------------------------------------------------------------------------------------------
 	
-	By appticonbtn = By.id("btnSideBar1");//appointment icon left menu
+	By appticonbtn = By.id("btnSideBar2");//appointment icon left menu
 	By newappointmentbtn = By.id("btnNewAppointmentAppointments");//newappointment button
 	By apptfirstname =By.id("txtFirstNameApptModal");//firstname in create new appointment
 	By apptlastname = By.id("txtLastNameApptModal");//lastname in create new appt
@@ -65,7 +65,7 @@ public class OverviewpgPO {
 	By apptsttime7am = By.xpath("//li[text() = '07:00 AM']");// start time 7 am
 	By apptpasttimemesg = By.xpath("//p[text() = 'Time is in the past']"); //Time is past error message
 	//------------------------------------------Messages-------------------------------------------------------
-	By notificonbtn = By.id("btnSideBar2");//Notifications icon in the left menu
+	By notificonbtn = By.id("btnSideBar3");//Notifications icon in the left menu
 	By notifnewmesgbtn = By.id("btnNewMessageMessages");//New Message button in the Notifications page
 	By notifpreparerdropdown = By.xpath("//*[@id='newMessageModalMessages']/div[2]/div/form/div[1]/span/div[2]/div/div/div");//Preparer dropdown in Create mesg dialog
 	By notifpreparerdpfirstlist = By.xpath("//li[text() = 'ONE THREE']");//First list item in preparer dp
@@ -81,7 +81,7 @@ public class OverviewpgPO {
 	By notifdelmesgdialog = By.id("confirm-delete-message-desc");//Delete message popup
 	By notifdelmesgdialogyesbtn = By.id("btnYesConfirmDeleteMessage");//Yes button in del mesg popup
 	//-------------------------------------Checks----------------------------------------------
-	By chksiconbtn = By.id("btnSideBar3");//checks icon button on the left menu
+	By chksiconbtn = By.id("btnSideBar5");//checks icon button on the left menu
 	By chkstestprintbtn = By.xpath("//span[text() ' Test Print']");// Test Print btn in checks page
 	By chkstestprintcancelbtn = By.className("cancel-button");// cancel btn  on test print dialog
 	By chksfilterdropdown = By.id("selectbankdropdown");//Filter drpdwn to select bank in Ready to print page

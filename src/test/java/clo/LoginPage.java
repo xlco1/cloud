@@ -23,6 +23,7 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 
+import pageObjects.AccountSettingsPO;
 import pageObjects.CompletesetupPO;
 import pageObjects.LogincloPO;
 import pageObjects.OverviewpgPO;
@@ -105,10 +106,7 @@ public void loginNegative() throws IOException, InterruptedException
 
 
 	       driver.quit();
-
-		
-
-	}
+	       }
 
 //@Test(priority = 2)
 public void forgotPassword() throws IOException, InterruptedException
@@ -174,12 +172,11 @@ public void loginPositive() throws IOException, InterruptedException
 	lp.clicksecLogin().click();
 	lp.clickmarkaspublic().click();
 	lp.clickthrdcontbtn().click();
-<<<<<<< HEAD
-   
-=======
+
+ 
     //lp.clickcontbtnIRS().click();
     //lp.clickcanceltour().click();
->>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
+
 	Thread.sleep(2000);
     op.clickoverview().click();
    // logger.info(op.clickoverview().getText());
@@ -207,6 +204,24 @@ public void loginPositive() throws IOException, InterruptedException
 		LogincloPO lp = new LogincloPO(driver);
 		OverviewpgPO op = new OverviewpgPO(driver);
 		Thread.sleep(2000);
+		
+		AccountSettingsPO ap = new AccountSettingsPO(driver);
+		//Thread.sleep(2000);
+		Wait = new WebDriverWait(driver,20);
+		Wait.until(ExpectedConditions.elementToBeClickable(ap.clickaccountsdropdown()));
+		ap.clickaccountsdropdown().click();
+		//Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(ap.clickswitchlink()));
+		ap.clickswitchlink().click();
+		//Thread.sleep(1000);
+		//Wait = new WebDriverWait(driver,05);
+		Wait.until(ExpectedConditions.elementToBeClickable(ap.clickswitchselectyeardropdown()));
+		ap.clickswitchselectyeardropdown().click();
+		//Thread.sleep(1000);
+		ap.clickswitchoptionyear2018().click();
+		//Thread.sleep(1000);
+		ap.clickswitchbtn().click();
+		Thread.sleep(3000);
 		op.clickappointmenticonbtn().click();
 		op.clicknewappointmentbtn().click();
 		op.clickapptfirstname().sendKeys("First");
@@ -335,15 +350,8 @@ public void loginPositive() throws IOException, InterruptedException
 		}
 		
 	
-<<<<<<< HEAD
-
-  
-
-  @Test(priority = 7)
-
-=======
 	@Test(priority = 8)
->>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
+
 	public void deleteAppointment() throws IOException, InterruptedException
 	{
 		try {
@@ -363,15 +371,8 @@ public void loginPositive() throws IOException, InterruptedException
 	   }
 	}
 
-<<<<<<< HEAD
-
-
-
-	@Test(priority = 8)
-
-=======
 	@Test(priority = 9)
->>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
+
 	public void deleteSecondAppointment() throws IOException, InterruptedException
 	{
 		try {
@@ -422,7 +423,6 @@ public void loginPositive() throws IOException, InterruptedException
 		
 	}
 	
-	
 	@Test(priority = 11)
 	public void newMessageReply() throws IOException, InterruptedException
 	{
@@ -448,15 +448,8 @@ public void loginPositive() throws IOException, InterruptedException
 			}
 		
 	}	
-	
-<<<<<<< HEAD
-
-
-	@Test(priority = 11)
-
-=======
 	//@Test(priority = 12)
->>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
+
 	public void deleteMessage() throws IOException, InterruptedException
 	{
 		try {
@@ -473,16 +466,8 @@ public void loginPositive() throws IOException, InterruptedException
 			test.log(LogStatus.ERROR, "Error in Delete Message");
 			}
 	}
-<<<<<<< HEAD
-		
 
-
-
-@Test(priority = 12)
-=======
-	
-	@Test(priority = 12)
->>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
+		@Test(priority = 12)
 	public void checksReadyToPrint() throws IOException, InterruptedException
 	{
 		try {
@@ -531,11 +516,6 @@ public void loginPositive() throws IOException, InterruptedException
 			test.log(LogStatus.ERROR, "Error in Check Register");
 			}
 	}
-
-
-
-
-
 	@Test(priority = 14)
 	public void voidCheck() throws IOException, InterruptedException
 	{
@@ -548,10 +528,6 @@ public void loginPositive() throws IOException, InterruptedException
 		op.clickchksvoidcheckbtn().click();
 		op.clickchksvoidcheckdialogcancelbtn().click();
 		test.log(LogStatus.INFO,"Void Check Passed");
-
-
-
-
 		//driver.quit();
 		}
 		catch(Exception e) {
@@ -561,9 +537,6 @@ public void loginPositive() throws IOException, InterruptedException
 			}
 
 			}	
-
-
-	
 	@AfterClass
 	public void teardown()
 	{

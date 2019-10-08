@@ -10,6 +10,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -667,14 +669,30 @@ public class DatabaseSettings extends Base {
 		logger.info("clicked thirdcontbtn");
 		Thread.sleep(2000);
 	    op.clickoverview().click();
-		
+	    AccountSettingsPO ap = new AccountSettingsPO(driver);
+		//Thread.sleep(2000);
+		Wait = new WebDriverWait(driver,20);
+		Wait.until(ExpectedConditions.elementToBeClickable(ap.clickaccountsdropdown()));
+		ap.clickaccountsdropdown().click();
+		//Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(ap.clickswitchlink()));
+		ap.clickswitchlink().click();
+		//Thread.sleep(1000);
+		//Wait = new WebDriverWait(driver,05);
+		Wait.until(ExpectedConditions.elementToBeClickable(ap.clickswitchselectyeardropdown()));
+		ap.clickswitchselectyeardropdown().click();
+		//Thread.sleep(1000);
+		ap.clickswitchoptionyear2018().click();
+		//Thread.sleep(1000);
+		ap.clickswitchbtn().click();
+		Thread.sleep(3000);
 	}
 	
 	@AfterClass
 	public void teardown()
 	{
 	 logger.info("in tear down");
-		//driver.close();
+		driver.close();
 		report.endTest(test);
 		report.flush();
 	} 

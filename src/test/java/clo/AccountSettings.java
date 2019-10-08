@@ -175,7 +175,7 @@ public void toggleTrainingModeOff() throws IOException, InterruptedException
 	//Thread.sleep(1000);
 	Wait.until(ExpectedConditions.elementToBeClickable(ap.clicktoggletrainingmodelink()));
 	ap.clicktoggletrainingmodelink().click();
-	//System.out.println("Traning Mode off");
+	//System.out.println("Training Mode off");
 	logger.info("Traning Mode off");
 	test.log(LogStatus.INFO,"Training Mode off");
 	}
@@ -272,7 +272,26 @@ public void login() throws IOException, InterruptedException
 	logger.info("clicked thirdcontbtn");
 	Thread.sleep(2000);
 	//Wait.until(ExpectedConditions.elementToBeClickable(op.clickoverview()));
-    op.clickoverview().click();
+   
+	op.clickoverview().click();
+	AccountSettingsPO ap = new AccountSettingsPO(driver);
+	//Thread.sleep(2000);
+	Wait = new WebDriverWait(driver,20);
+	Wait.until(ExpectedConditions.elementToBeClickable(ap.clickaccountsdropdown()));
+	ap.clickaccountsdropdown().click();
+	//Thread.sleep(1000);
+	Wait.until(ExpectedConditions.elementToBeClickable(ap.clickswitchlink()));
+	ap.clickswitchlink().click();
+	//Thread.sleep(1000);
+	//Wait = new WebDriverWait(driver,05);
+	Wait.until(ExpectedConditions.elementToBeClickable(ap.clickswitchselectyeardropdown()));
+	ap.clickswitchselectyeardropdown().click();
+	//Thread.sleep(1000);
+	ap.clickswitchoptionyear2018().click();
+	//Thread.sleep(1000);
+	ap.clickswitchbtn().click();
+	Thread.sleep(3000);
+    
 	
 }
 	//lp.clickcontbtnIRS().click();
