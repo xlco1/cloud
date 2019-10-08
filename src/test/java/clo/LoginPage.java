@@ -46,22 +46,8 @@ public void loginNegative() throws IOException, InterruptedException
 		driver = invokeBrowser();
 		driver.get("https://qa.crosslinkonline.com/#");
 		LogincloPO lp = new LogincloPO(driver);
-
 		logger.info("STARTED : LOGIN NEGATIVE");
-		//lp.getusername().sendKeys(prop.getProperty("username"));
 		lp.getusername().sendKeys("000334");
-				//prop.getProperty("preparerlogin"));
-		lp.getusername().sendKeys(prop.getProperty("000334"));
-		logger.info("STARTED : LOGIN NEGATIVE");
-		lp.getusername().sendKeys(prop.getProperty("username"));
-
-
-		lp.getusername().sendKeys(prop.getProperty("000334"));
-		logger.info("STARTED : LOGIN NEGATIVE");
-		lp.getusername().sendKeys(prop.getProperty("username"));
-
-
-		lp.getusername().sendKeys(prop.getProperty("preparerlogin"));
 		lp.getPassword().sendKeys("password");
 		Thread.sleep(1000);
 		lp.clickLogin().click();
@@ -69,22 +55,14 @@ public void loginNegative() throws IOException, InterruptedException
 		System.out.println(invalidPassword.getText());
 		if(invalidPassword.getText().contains("Incorrect password"))
 		{
-
 		//System.out.println("Login Negative testcase passed" );
 		logger.info("PASSED : LOGIN NEGATIVE");
 		//logger.info("--------------------------------");
 		logger.info("Login Negative testcase passed");
-
-
-
 		//System.out.println("Login Negative testcase passed" );
-
 		logger.info("PASSED : LOGIN NEGATIVE");
 		//logger.info("--------------------------------");
-
-		logger.info("Login Negative testcase passed");
-
-
+    	logger.info("Login Negative testcase passed");
 		test.log(LogStatus.INFO,"Login Negative testcase passed");
 		}
 		else
@@ -94,20 +72,13 @@ public void loginNegative() throws IOException, InterruptedException
 
 			}
 	       driver.close();
-	
-			
 		}
 
 		catch(Exception e) {
 			logger.error("Error in Login Negative" + e);
 			test.log(LogStatus.ERROR, "Error in Login Negative");
 		}
-
-
-	       driver.quit();
-
-		
-
+       driver.quit();
 	}
 
 //@Test(priority = 2)
@@ -134,17 +105,6 @@ public void forgotPassword() throws IOException, InterruptedException
 
 	//System.out.println("forgot password passed");
 	logger.info("SUCCESS : FORGOT PASSWORD");
-	//System.out.println("forgot password passed");
-	logger.info("forgot password passed");
-
-
-	System.out.println("forgot password passed");
-	logger.info("SUCCESS : FORGOT PASSWORD");
-
-	//System.out.println("forgot password passed");
-	logger.info("forgot password passed");
-
-
 	test.log(LogStatus.INFO,"forgot password passed");
 	WebElement donebtn = driver.findElement(By.id("btnHideEmailSentModal"));
 	donebtn.click();
@@ -174,12 +134,8 @@ public void loginPositive() throws IOException, InterruptedException
 	lp.clicksecLogin().click();
 	lp.clickmarkaspublic().click();
 	lp.clickthrdcontbtn().click();
-<<<<<<< HEAD
-   
-=======
     //lp.clickcontbtnIRS().click();
     //lp.clickcanceltour().click();
->>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
 	Thread.sleep(2000);
     op.clickoverview().click();
    // logger.info(op.clickoverview().getText());
@@ -198,7 +154,6 @@ public void loginPositive() throws IOException, InterruptedException
    
 	}
 }
-
 
 	@Test(priority = 4)
 	public void createNewAppointment() throws IOException, InterruptedException
@@ -225,7 +180,6 @@ public void loginPositive() throws IOException, InterruptedException
 			op.clickapptschconflictconfirmbtn().click();
 			op.clickapptcreatedclsoebtn().click();
 		}
-		
 		else {	//op.clickapptcreatedclsoebtn().click();
 			//Thread.sleep(1000);
 			//logger.info(op.clickapptcreateddialog().getText()); */
@@ -333,17 +287,8 @@ public void loginPositive() throws IOException, InterruptedException
 		   }
 			
 		}
-		
 	
-<<<<<<< HEAD
-
-  
-
-  @Test(priority = 7)
-
-=======
 	@Test(priority = 8)
->>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
 	public void deleteAppointment() throws IOException, InterruptedException
 	{
 		try {
@@ -363,15 +308,10 @@ public void loginPositive() throws IOException, InterruptedException
 	   }
 	}
 
-<<<<<<< HEAD
 
 
 
-	@Test(priority = 8)
-
-=======
 	@Test(priority = 9)
->>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
 	public void deleteSecondAppointment() throws IOException, InterruptedException
 	{
 		try {
@@ -449,14 +389,10 @@ public void loginPositive() throws IOException, InterruptedException
 		
 	}	
 	
-<<<<<<< HEAD
-
-
 	@Test(priority = 11)
 
-=======
+
 	//@Test(priority = 12)
->>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
 	public void deleteMessage() throws IOException, InterruptedException
 	{
 		try {
@@ -473,16 +409,9 @@ public void loginPositive() throws IOException, InterruptedException
 			test.log(LogStatus.ERROR, "Error in Delete Message");
 			}
 	}
-<<<<<<< HEAD
-		
 
 
-
-@Test(priority = 12)
-=======
-	
 	@Test(priority = 12)
->>>>>>> 49516e63287e6e4a93e39d9e11eb39dfe51fdec9
 	public void checksReadyToPrint() throws IOException, InterruptedException
 	{
 		try {
@@ -532,10 +461,6 @@ public void loginPositive() throws IOException, InterruptedException
 			}
 	}
 
-
-
-
-
 	@Test(priority = 14)
 	public void voidCheck() throws IOException, InterruptedException
 	{
@@ -548,11 +473,6 @@ public void loginPositive() throws IOException, InterruptedException
 		op.clickchksvoidcheckbtn().click();
 		op.clickchksvoidcheckdialogcancelbtn().click();
 		test.log(LogStatus.INFO,"Void Check Passed");
-
-
-
-
-		//driver.quit();
 		}
 		catch(Exception e) {
 			logger.error("Error in Check Register" + e);
@@ -561,8 +481,6 @@ public void loginPositive() throws IOException, InterruptedException
 			}
 
 			}	
-
-
 	
 	@AfterClass
 	public void teardown()
