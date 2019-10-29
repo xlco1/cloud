@@ -53,13 +53,18 @@ public class DatabaseSettings extends Base {
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);
 		Thread.sleep(2000);
 		ap.clickaccountsdropdown().click();
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
+		Wait = new WebDriverWait(driver,20);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdatabaselink()));
 		dp.clickdatabaselink().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitieszipcodeslink()));
 		dp.clickcitieszipcodeslink().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickaddnewbtn()));
 		dp.clickaddnewbtn().click();
 		dp.clickcitieszipcodetxtbox().sendKeys("12345");
 		dp.clickcitiescitytxtbox().sendKeys("Test City");
 		dp.clickcitiesstatecodetxtbox().sendKeys("CA");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitiesaddbtn()));
 		dp.clickcitiesaddbtn().click();
 		//Thread.sleep(1000);
 		//dp.clicksearchfield().sendKeys("12345");
@@ -81,12 +86,15 @@ public class DatabaseSettings extends Base {
 		try {
 		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeditbtn()));
 		dp.clickeditbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitieszipcodetxtbox()));
 		dp.clickcitieszipcodetxtbox().clear();
 		dp.clickcitieszipcodetxtbox().sendKeys("12346");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitiescitytxtbox()));
 		dp.clickcitiescitytxtbox().clear();
 		dp.clickcitiescitytxtbox().sendKeys("Test City Edited");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitiesaddbtn()));
 		dp.clickcitiesaddbtn().click();
 		//System.out.println(" City Edited Sucessfully");
 		logger.info("City Edited Sucessfully");
@@ -108,7 +116,7 @@ public class DatabaseSettings extends Base {
 		act.moveToElement(dp.clickeditbtn()).moveToElement(dp.clickthreedots()).click().build().perform();
 		Thread.sleep(1000);
 		act.moveToElement(driver.findElement(By.cssSelector("#anchorDeleteButton"))).click().perform();
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitiesdeletemodaldelbtn()));
 		dp.clickcitiesdeletemodaldelbtn().click();
 		logger.info("City Deleted Successfully");
 		test.log(LogStatus.INFO,"City Deleted Successfully");
@@ -126,18 +134,30 @@ public class DatabaseSettings extends Base {
 		try {
 		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
+		//Wait.until(ExpectedConditions.elementToBeClickable(dp.clickemployerspayerslink()));
 		Thread.sleep(1000);
 		dp.clickemployerspayerslink().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickaddnewbtn()));
 		dp.clickaddnewbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempfederaleintxtbx()));
 		dp.clickempfederaleintxtbx().sendKeys("111111111");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempnamecontroltxtbx()));
 		dp.clickempnamecontroltxtbx().sendKeys("Test");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempcompanyname()));
 		dp.clickempcompanyname().sendKeys("Automation company");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempcompanyaddress()));
 		dp.clickempcompanyaddress().sendKeys("7575 Linne Rd");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempcitytxtbx()));
 		dp.clickempcitytxtbx().sendKeys("Tracy");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempstatetxtbx()));
 		dp.clickempstatetxtbx().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempCAstatetxtbx()));
 		dp.clickempCAstatetxtbx().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempzipcodetxtbx()));
 		dp.clickempzipcodetxtbx().sendKeys("95304");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempstate1identftxtbx()));
 		dp.clickempstate1identftxtbx().sendKeys("123456789");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempsavebtn()));
 		dp.clickempsavebtn().click();
 		//System.out.println(" New Employer added Successfully");
 		logger.info("New Employer added Successfully");
@@ -155,16 +175,21 @@ public class DatabaseSettings extends Base {
 		try {
 		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeditbtn()));
 		dp.clickeditbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempfederaleintxtbx()));
 		dp.clickempfederaleintxtbx().clear();
 		dp.clickempfederaleintxtbx().sendKeys("111111112");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempnamecontroltxtbx()));
 		dp.clickempnamecontroltxtbx().clear();
 		dp.clickempnamecontroltxtbx().sendKeys("TestUpdated");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempcompanyname()));
 		dp.clickempcompanyname().clear();
 		dp.clickempcompanyname().sendKeys("Automation company Update");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempcompanyaddress()));
 		dp.clickempcompanyaddress().clear();
 		dp.clickempcompanyaddress().sendKeys("7576 Linne Rd");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickempsavebtn()));
 		dp.clickempsavebtn().click();
 		//System.out.println(" New Employer Editted Successfully");
 		logger.info("New Employer Editted Successfully");
@@ -190,7 +215,7 @@ public class DatabaseSettings extends Base {
 		//dp.clickcitiesdeletebtn().click();
 		act.moveToElement(driver.findElement(By.cssSelector("#anchorDeleteButton"))).click().perform();
 		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitiesdeletemodaldelbtn()));
 		dp.clickcitiesdeletemodaldelbtn().click();
 		logger.info("Employer Deleted Successfully");
 		test.log(LogStatus.INFO,"Employer Deleted Successfully");
@@ -209,16 +234,27 @@ public class DatabaseSettings extends Base {
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
 		Thread.sleep(1000);
 		dp.clickcareproviderslink().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickaddnewbtn()));
 		dp.clickaddnewbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickprovidercode()));
 		dp.clickprovidercode().sendKeys("11111111");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickprovidertype()));
 		dp.clickprovidertype().sendKeys("Test type");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickprovidernamecontrol()));
 		dp.clickprovidernamecontrol().sendKeys("Proctrl");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcareprovidername()));
 		dp.clickcareprovidername().sendKeys("Test Careprovider");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickprovideradd()));
 		dp.clickprovideradd().sendKeys("128 Indigo dr");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickprovidercity()));
 		dp.clickprovidercity().sendKeys("Mountain House");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickproviderstate()));
 		dp.clickproviderstate().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickproviderCAstate()));
 		dp.clickproviderCAstate().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickproviderzipcode()));
 		dp.clickproviderzipcode().sendKeys("95391");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickprovidersavebtn()));
 		dp.clickprovidersavebtn().click();
 		logger.info("New Care provider added successfully");
 		test.log(LogStatus.INFO,"New Care provider added successfully");
@@ -235,13 +271,17 @@ public class DatabaseSettings extends Base {
 		try {
 		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeditbtn()));
 		dp.clickeditbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickprovidercode()));
 		dp.clickprovidercode().clear();
 		dp.clickprovidercode().sendKeys("11111112");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcareprovidername()));
 		dp.clickcareprovidername().clear();
 		dp.clickcareprovidername().sendKeys("NameUpdated Careprovider");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickprovideradd()));
 		dp.clickprovideradd().sendKeys("128 ritta dr");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickprovidersavebtn()));
 		dp.clickprovidersavebtn().click();
 		logger.info("Care provider editted successfully");
 		test.log(LogStatus.INFO,"Care provider editted successfully");
@@ -265,7 +305,7 @@ public class DatabaseSettings extends Base {
 		act.moveToElement(driver.findElement(By.cssSelector("#anchorDeleteButton"))).click().perform();
 		//dp.clickcitiesdeletebtn().click();
 		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitiesdeletemodaldelbtn()));
 		dp.clickcitiesdeletemodaldelbtn().click();
 		logger.info("Care Provider Deleted Successfully");
 		test.log(LogStatus.INFO,"Care Provider Deleted Successfully");
@@ -283,8 +323,11 @@ public class DatabaseSettings extends Base {
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
 		Thread.sleep(1000);
 		dp.clickreferralslink().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickaddnewbtn()));
 		dp.clickaddnewbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickreferralsname()));
 		dp.clickreferralsname().sendKeys("12345");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickreferralsaddbtn()));
 		dp.clickreferralsaddbtn().click();
 		logger.info("Refferrals added successfully");
 		test.log(LogStatus.INFO,"Refferrals added successfully");
@@ -301,10 +344,12 @@ public class DatabaseSettings extends Base {
 		try {
 		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeditbtn()));
 		dp.clickeditbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickreferralsname()));
 		dp.clickreferralsname().clear();
 		dp.clickreferralsname().sendKeys("12354");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickreferralsaddbtn()));
 		dp.clickreferralsaddbtn().click();
 		logger.info(" Refferrals editted successfully");
 		test.log(LogStatus.INFO,"Refferrals editted successfully");
@@ -329,7 +374,7 @@ public class DatabaseSettings extends Base {
 		act.moveToElement(driver.findElement(By.cssSelector("#anchorDeleteButton"))).click().perform();
 		//dp.clickcitiesdeletebtn().click();
 		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitiesdeletemodaldelbtn()));
 		dp.clickcitiesdeletemodaldelbtn().click();
 		//WebElement donebtn = driver.findElement(By.id("btnHideSettingsError"));
 		/*
@@ -356,14 +401,23 @@ public class DatabaseSettings extends Base {
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
 		Thread.sleep(1000);
 		dp.clickdoneelink().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickaddnewbtn()));
 		dp.clickaddnewbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneeein()));
 		dp.clickdoneeein().sendKeys("11111111");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneename()));
 		dp.clickdoneename().sendKeys("Automation Donee");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneeadd()));
 		dp.clickdoneeadd().sendKeys("1111 Test Street");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneecity()));
 		dp.clickdoneecity().sendKeys("Test City");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneestate()));
 		dp.clickdoneestate().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneeCAstate()));
 		dp.clickdoneeCAstate().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneezipcode()));
 		dp.clickdoneezipcode().sendKeys("91119");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneesavebtn()));
 		dp.clickdoneesavebtn().click();
 		logger.info(" Donee added successfully");
 		test.log(LogStatus.INFO,"Donee added successfully");
@@ -380,16 +434,21 @@ public class DatabaseSettings extends Base {
 		try {
 		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeditbtn()));
 		dp.clickeditbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneeein()));
 		dp.clickdoneeein().clear();
 		dp.clickdoneeein().sendKeys("111111112");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneename()));
 		dp.clickdoneename().clear();
 		dp.clickdoneename().sendKeys("Updated Automation Donee");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneeadd()));
 		dp.clickdoneeadd().clear();
 		dp.clickdoneeadd().sendKeys("1111 Updated Street");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneecity()));
 		dp.clickdoneecity().clear();
 		dp.clickdoneecity().sendKeys("Updated City");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdoneesavebtn()));
 		dp.clickdoneesavebtn().click();
 		logger.info(" Donee editted successfully");
 		test.log(LogStatus.INFO,"Donee editted successfully");
@@ -416,7 +475,7 @@ public class DatabaseSettings extends Base {
 		//WebElement delbtn = driver.findElement(By.xpath("//*[@id='action-menu']/div[2]/ul/li/text())"));
 		//dp.clickcitiesdeletebtn().click();
 		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitiesdeletemodaldelbtn()));
 		dp.clickcitiesdeletemodaldelbtn().click();
 		logger.info(" Donee Deleted Successfully");
 		test.log(LogStatus.INFO,"Donee Deleted Successfully");
@@ -436,9 +495,13 @@ public class DatabaseSettings extends Base {
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
 		Thread.sleep(1000);
 		dp.clickbankrtnslink().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickaddnewbtn()));
 		dp.clickaddnewbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickbankrtn()));
 		dp.clickbankrtn().sendKeys("111111111");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickbankname()));
 		dp.clickbankname().sendKeys("Automation Bank");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickbanksavebtn()));
 		dp.clickbanksavebtn().click();
 		logger.info(" Bank RTN added successfully");
 		test.log(LogStatus.INFO,"Bank RTN added successfully");
@@ -456,11 +519,15 @@ public class DatabaseSettings extends Base {
 		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
 		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeditbtn()));
 		dp.clickeditbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickbankrtn()));
 		dp.clickbankrtn().clear();
 		dp.clickbankrtn().sendKeys("111111112");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickbankname()));
 		dp.clickbankname().clear();
 		dp.clickbankname().sendKeys("Updated Bank");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickbanksavebtn()));
 		dp.clickbanksavebtn().click();
 		logger.info(" Bank RTN editted successfully");
 		test.log(LogStatus.INFO,"Bank RTN editted successfully");
@@ -487,7 +554,7 @@ public class DatabaseSettings extends Base {
 		//WebElement delbtn = driver.findElement(By.xpath("//*[@id='action-menu']/div[2]/ul/li/text())"));
 		//dp.clickcitiesdeletebtn().click();
 		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitiesdeletemodaldelbtn()));
 		dp.clickcitiesdeletemodaldelbtn().click();
 		logger.info("Bank RTN Deleted Successfully");
 		test.log(LogStatus.INFO,"Bank RTN Deleted Successfully");
@@ -506,8 +573,11 @@ public class DatabaseSettings extends Base {
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
 		Thread.sleep(1000);
 		dp.clickoccupationslink().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickaddnewbtn()));
 		dp.clickaddnewbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickoccupationname()));
 		dp.clickoccupationname().sendKeys("Automation Occupation");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickoccupationaddbtn()));
 		dp.clickoccupationaddbtn().click();
 		logger.info("New Occupation added successfully");
 		test.log(LogStatus.INFO,"New Occupation added successfully");
@@ -525,10 +595,12 @@ public class DatabaseSettings extends Base {
 		try {
 		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeditbtn()));
 		dp.clickeditbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickoccupationname()));
 		dp.clickoccupationname().clear();
 		dp.clickoccupationname().sendKeys("Automation Occupation");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickoccupationaddbtn()));
 		dp.clickoccupationaddbtn().click();
 		logger.info("Occupation  editted successfully");
 		test.log(LogStatus.INFO,"Occupation  editted successfully");
@@ -555,7 +627,7 @@ public class DatabaseSettings extends Base {
 		//WebElement delbtn = driver.findElement(By.xpath("//*[@id='action-menu']/div[2]/ul/li/text())"));
 		//dp.clickcitiesdeletebtn().click();
 		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitiesdeletemodaldelbtn()));
 		dp.clickcitiesdeletemodaldelbtn().click();
 		logger.info("Occupations Deleted Successfully");
 		test.log(LogStatus.INFO,"Occupations Deleted Successfully");
@@ -574,13 +646,21 @@ public class DatabaseSettings extends Base {
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
 		Thread.sleep(1000);
 		dp.clickeducationalinstitutionslink().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickaddnewbtn()));
 		dp.clickaddnewbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickedufederalein()));
 		dp.clickedufederalein().sendKeys("111111111");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeduinstitutionname()));
 		dp.clickeduinstitutionname().sendKeys("Automation Institute");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeduinstitutionadd()));
 		dp.clickeduinstitutionadd().sendKeys("7577 automation rd");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeducity()));
 		dp.clickeducity().sendKeys("Tracy");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeduCAstate()));
 		dp.clickeduCAstate().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeduzipcode()));
 		dp.clickeduzipcode().sendKeys("95441");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeduaddbtn()));
 		dp.clickeduaddbtn().click();
 		logger.info("New Educational Institution  added  successfully");
 		test.log(LogStatus.INFO,"New Educational Institution  added  successfully");
@@ -597,16 +677,19 @@ public class DatabaseSettings extends Base {
 		try {
 		//AccountSettingsPO ap = new AccountSettingsPO(driver);
 		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeditbtn()));
 		dp.clickeditbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickedufederalein()));
 		dp.clickedufederalein().clear();
 		dp.clickedufederalein().sendKeys("111111112");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeduinstitutionname()));
 		dp.clickeduinstitutionname().clear();
 		dp.clickeduinstitutionname().sendKeys("Updated Institute");
 		//dp.clickeduinstitutionadd().clear();
 		//dp.clickeduinstitutionadd().sendKeys("7577 Updated rd");
 		//dp.clickeducity().clear();
 		//dp.clickeducity().sendKeys("Uptated Tracy");	
+		//Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeduaddbtn()));
 		dp.clickeduaddbtn().click();
 		logger.info("Educational Institution editted  successfully");
 		test.log(LogStatus.INFO,"Educational Institution editted  successfully");
@@ -632,18 +715,99 @@ public class DatabaseSettings extends Base {
 		//WebElement delbtn = driver.findElement(By.xpath("//*[@id='action-menu']/div[2]/ul/li/text())"));
 		//dp.clickcitiesdeletebtn().click();
 		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
-		Thread.sleep(1000);
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitiesdeletemodaldelbtn()));
 		dp.clickcitiesdeletemodaldelbtn().click();
 		logger.info("Educational Institute Deleted Successfully");
 		test.log(LogStatus.INFO,"Educational Institute Deleted Successfully");
-		Thread.sleep(2000);
-		dp.clickdatabaseclosebtn().click();
+		//Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdatabaseclosebtn()));
+		//dp.clickdatabaseclosebtn().click();
 	}
 	catch(Exception e) {
 		logger.error("Error in  Delete DB Eduational Institute" + e);
 		test.log(LogStatus.ERROR, "Error in Delete DB Eduational Institute");
 	}
 	}	
+	@Test(priority = 46)
+	public void dbadduserstatuscodes() throws IOException, InterruptedException
+	{
+		try {
+		//AccountSettingsPO ap = new AccountSettingsPO(driver);
+		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
+		Thread.sleep(1000);
+		dp.clickuserstatuscodeslink().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickaddnewbtn()));
+		dp.clickaddnewbtn().click();
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickuserstatuscodestxtbx()));
+		dp.clickuserstatuscodestxtbx().click();
+		dp.clickuserstatuscodestxtbx().sendKeys("1111");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickuserstatusdesc()));
+		dp.clickuserstatusdesc().click();
+		dp.clickuserstatusdesc().sendKeys("Automation status desc");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickuserstatusaddbtn()));
+		dp.clickuserstatusaddbtn().click();
+		logger.info("User Status Codes added  successfully");
+		test.log(LogStatus.INFO,"User Status Codes added  successfully");
+		}
+		catch(Exception e) {
+			logger.error("Error in  Add DB User Status Codes" + e);
+			test.log(LogStatus.ERROR, "Error in  Add DB User Status Codes");
+		}
+	}
+	@Test(priority = 47)
+	public void dbEdituserstatuscodes() throws IOException, InterruptedException
+	{
+		try {
+		//AccountSettingsPO ap = new AccountSettingsPO(driver);
+		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
+		//Wait.until(ExpectedConditions.elementToBeClickable(dp.clickeditbtn()));
+		
+		Thread.sleep(1000);
+		dp.clickuserstatuseditlbtn().click();
+		//Wait.until(ExpectedConditions.elementToBeClickable(dp.clickuserstatuscodestxtbx()));
+		//Thread.sleep(1000);
+		dp.clickuserstatuscodestxtbx().clear();
+		dp.clickuserstatuscodestxtbx().sendKeys("11112");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickuserstatusdesc()));
+		dp.clickuserstatusdesc().clear();
+		dp.clickuserstatusdesc().sendKeys("Automation status desc Editted");
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickuserstatusaddbtn()));
+		dp.clickuserstatusaddbtn().click();
+		logger.info("User Status Codes editted  successfully");
+		test.log(LogStatus.INFO,"User Status Codes editted  successfully");
+		}
+		catch(Exception e) {
+			logger.error("Error in  Edit DB User Status Codes" + e);
+			test.log(LogStatus.ERROR, "Error in  Edit DB User Status Codes");
+		}
+	}
+	@Test(priority = 48)
+	public void dbDeleteUserStatusCodes() throws IOException, InterruptedException
+	{
+		try {
+		//AccountSettingsPO ap = new AccountSettingsPO(driver);
+		DatabaseSettingsPO dp = new DatabaseSettingsPO(driver);	
+		Thread.sleep(1000);
+		//WebElement frstRow = driver.findElement(By.xpath("//tr/td[text() = 'Test City Edited,CA']"));
+		Actions act = new Actions(driver);
+		act.moveToElement(dp.clickeditbtn()).moveToElement(dp.clickthreedots()).click().build().perform();
+		//dp.clickthreedots().click();
+		act.moveToElement(driver.findElement(By.cssSelector("#anchorDeleteButton"))).click().perform();
+		//WebElement delbtn = driver.findElement(By.xpath("//*[@id='action-menu']/div[2]/ul/li/text())"));
+		//dp.clickcitiesdeletebtn().click();
+		//assertTrue(dp.clickcitiesdeltitle().getText().contains("Test City Edited,CA"));
+		Wait.until(ExpectedConditions.elementToBeClickable(dp.clickcitiesdeletemodaldelbtn()));
+		dp.clickcitiesdeletemodaldelbtn().click();
+		logger.info("User Status Code Deleted Successfully");
+		test.log(LogStatus.INFO,"User Status Code Deleted Successfully");
+		//Wait.until(ExpectedConditions.elementToBeClickable(dp.clickdatabaseclosebtn()));
+		//dp.clickdatabaseclosebtn().click();
+	}
+	catch(Exception e) {
+		logger.error("Error in  Delete DB User Status Code" + e);
+		test.log(LogStatus.ERROR, "Error in Delete DB User Status Code");
+	}
+	}	
+	
 	@BeforeClass
 	public void login() throws IOException, InterruptedException
 	{
@@ -654,6 +818,7 @@ public class DatabaseSettings extends Base {
 		lp.getusername().sendKeys(prop.getProperty("preparerlogin1"));
 		lp.getPassword().sendKeys(prop.getProperty("preparerpswd1"));
 		Thread.sleep(1000);
+		//Wait.until(ExpectedConditions.elementToBeClickable(lp.clickLogin()));
 		lp.clickLogin().click();
 		logger.info("Username and Password success");
 		OverviewpgPO op = new OverviewpgPO(driver);
@@ -661,13 +826,17 @@ public class DatabaseSettings extends Base {
 		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		//WebDriverWait wait = new WebDriverWait(driver,10);
 		//wait.until(ExpectedConditions.elementToBeClickable(lp.clicksecLogin()));
+		Thread.sleep(2000);
+		//Wait.until(ExpectedConditions.elementToBeClickable(lp.clicksecLogin()));
 		lp.clicksecLogin().click();
 		logger.info("clicked secLogin");
+		//Wait.until(ExpectedConditions.elementToBeClickable(lp.clickmarkaspublic()));
 		lp.clickmarkaspublic().click();
 		logger.info("Clicked markaspublic");
+		//Wait.until(ExpectedConditions.elementToBeClickable(lp.clickthrdcontbtn()));
 		lp.clickthrdcontbtn().click();
 		logger.info("clicked thirdcontbtn");
-		Thread.sleep(2000);
+		//Wait.until(ExpectedConditions.elementToBeClickable(op.clickoverview()));
 	    op.clickoverview().click();
 	    AccountSettingsPO ap = new AccountSettingsPO(driver);
 		//Thread.sleep(2000);

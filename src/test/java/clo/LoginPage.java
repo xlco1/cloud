@@ -79,15 +79,11 @@ public void loginNegative() throws IOException, InterruptedException
 			logger.error("Error in Login Negative" + e);
 			test.log(LogStatus.ERROR, "Error in Login Negative");
 		}
-<<<<<<< HEAD
 
-
-	       driver.quit();
+		driver.quit();
 	       }
-=======
-       driver.quit();
-	}
->>>>>>> a11bfaf363827ac26bda1a5cba183e89d86e138f
+
+      
 
 //@Test(priority = 2)
 public void forgotPassword() throws IOException, InterruptedException
@@ -110,7 +106,6 @@ public void forgotPassword() throws IOException, InterruptedException
 	System.out.println(emailsentdialog.getText());
 	logger.info(emailsentdialog.getText());
 	assertTrue(emailsentdialog.getText().contains("EMAIL SENT"));
-
 	//System.out.println("forgot password passed");
 	logger.info("SUCCESS : FORGOT PASSWORD");
 	test.log(LogStatus.INFO,"forgot password passed");
@@ -139,19 +134,15 @@ public void loginPositive() throws IOException, InterruptedException
 	lp.getPassword().sendKeys("P@ssword1");
 	Thread.sleep(1000);
 	lp.clickLogin().click();
+	Thread.sleep(1000);
 	lp.clicksecLogin().click();
 	lp.clickmarkaspublic().click();
+	Thread.sleep(1000);
 	lp.clickthrdcontbtn().click();
-<<<<<<< HEAD
-
- 
-    //lp.clickcontbtnIRS().click();
+	//lp.clickcontbtnIRS().click();
     //lp.clickcanceltour().click();
-
-=======
-    //lp.clickcontbtnIRS().click();
+	//lp.clickcontbtnIRS().click();
     //lp.clickcanceltour().click();
->>>>>>> a11bfaf363827ac26bda1a5cba183e89d86e138f
 	Thread.sleep(2000);
     op.clickoverview().click();
    // logger.info(op.clickoverview().getText());
@@ -323,10 +314,6 @@ public void loginPositive() throws IOException, InterruptedException
 		}
 	
 	@Test(priority = 8)
-<<<<<<< HEAD
-
-=======
->>>>>>> a11bfaf363827ac26bda1a5cba183e89d86e138f
 	public void deleteAppointment() throws IOException, InterruptedException
 	{
 		try {
@@ -346,15 +333,9 @@ public void loginPositive() throws IOException, InterruptedException
 	   }
 	}
 
-<<<<<<< HEAD
-	@Test(priority = 9)
-
-=======
-
-
 
 	@Test(priority = 9)
->>>>>>> a11bfaf363827ac26bda1a5cba183e89d86e138f
+
 	public void deleteSecondAppointment() throws IOException, InterruptedException
 	{
 		try {
@@ -430,16 +411,9 @@ public void loginPositive() throws IOException, InterruptedException
 			}
 		
 	}	
-<<<<<<< HEAD
-	//@Test(priority = 12)
 
-=======
 	
-	@Test(priority = 11)
-
-
-	//@Test(priority = 12)
->>>>>>> a11bfaf363827ac26bda1a5cba183e89d86e138f
+	@Test(priority = 12)
 	public void deleteMessage() throws IOException, InterruptedException
 	{
 		try {
@@ -457,12 +431,9 @@ public void loginPositive() throws IOException, InterruptedException
 			}
 	}
 
-<<<<<<< HEAD
-		@Test(priority = 12)
-=======
 
-	@Test(priority = 12)
->>>>>>> a11bfaf363827ac26bda1a5cba183e89d86e138f
+
+	@Test(priority = 13)
 	public void checksReadyToPrint() throws IOException, InterruptedException
 	{
 		try {
@@ -488,7 +459,7 @@ public void loginPositive() throws IOException, InterruptedException
 			}
 	}
 			
-	@Test(priority = 13)
+	@Test(priority = 14)
 	public void checksRegister() throws IOException, InterruptedException
 	{
 		try {
@@ -511,11 +482,8 @@ public void loginPositive() throws IOException, InterruptedException
 			test.log(LogStatus.ERROR, "Error in Check Register");
 			}
 	}
-<<<<<<< HEAD
-=======
 
->>>>>>> a11bfaf363827ac26bda1a5cba183e89d86e138f
-	@Test(priority = 14)
+	@Test(priority = 15)
 	public void voidCheck() throws IOException, InterruptedException
 	{
 		try {
@@ -527,10 +495,7 @@ public void loginPositive() throws IOException, InterruptedException
 		op.clickchksvoidcheckbtn().click();
 		op.clickchksvoidcheckdialogcancelbtn().click();
 		test.log(LogStatus.INFO,"Void Check Passed");
-<<<<<<< HEAD
-		//driver.quit();
-=======
->>>>>>> a11bfaf363827ac26bda1a5cba183e89d86e138f
+
 		}
 		catch(Exception e) {
 			logger.error("Error in Check Register" + e);
@@ -539,10 +504,7 @@ public void loginPositive() throws IOException, InterruptedException
 			}
 
 			}	
-<<<<<<< HEAD
-=======
-	
->>>>>>> a11bfaf363827ac26bda1a5cba183e89d86e138f
+
 	@AfterClass
 	public void teardown()
 	{

@@ -264,6 +264,7 @@ public void login() throws IOException, InterruptedException
 	//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	//WebDriverWait wait = new WebDriverWait(driver,10);
 	//wait.until(ExpectedConditions.elementToBeClickable(lp.clicksecLogin()));
+	Thread.sleep(2000);
 	lp.clicksecLogin().click();
 	logger.info("clicked secLogin");
 	lp.clickmarkaspublic().click();

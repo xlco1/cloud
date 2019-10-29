@@ -98,8 +98,16 @@ public class DatabaseSettingsPO {
 		By eduuseforeignaddchk = By.id("chkDomesticAddrEduInst");//use foreign add chk box
 		By educancelbtn = By.id("btnCancelAddUUpsertEduInst");// cancel btn
 		By eduaddbtn = By.id("btnUpsertEduInst");//add btn
+		//----------------------------------------User Status Code-------------------------------------------------------------------------
+		By userstatuscodeslink = By.id("dbClickableRowUser Status Codes");// user status codes link in the left menu
+		By userstatuscode = By.name("status_code");// user status code text box
+		By usersatusdesc = By.name("status_description");// Status Description txt box
+		By userstatuseditbtn = By.id("btnEditUserDBTable");
+		By useraddbtn = By.id("btnUpsertBankRtn");// add btn
+		By usercancelbtn = By.id("btnCancelAddUpsertBankRtn");// Cancel btn
 		//--------------------------------close button to come out of DB--------------------------------------------------------------------------
 		By databaseclosebtn = By.id("btnSaveAndCloseSettingsProfile");
+		
 		//-------------------------------------------------------zipcode/cities-----------------------------------------------------------
 		
 		public WebElement clickdatabaselink()
@@ -422,8 +430,33 @@ public class DatabaseSettingsPO {
 		{
 			return driver.findElement(eduCAstate);
 		}
+	//----------------------user status Codes------------------------------------------------------------------------
+		public WebElement clickuserstatuscodeslink()
+		{
+			return driver.findElement(userstatuscodeslink);
+		}	
+		public WebElement clickuserstatuscodestxtbx()
+		{
+			return driver.findElement(userstatuscode);
+		}	
+		public WebElement clickuserstatusdesc()
+		{
+			return driver.findElement(usersatusdesc);
+		}
+		public WebElement clickuserstatusaddbtn()
+		{
+			return driver.findElement(useraddbtn);
+		}
+		public WebElement clickuserstatuscancelbtn()
+		{
+			return driver.findElement(usercancelbtn);
+		}
+		public WebElement clickuserstatuseditlbtn()
+		{
+			return driver.findElement(userstatuseditbtn);
+		}
 		
-	//--------------------------------------------------------------------------------	
+	//------------------------------DB Close btn--------------------------------------------------------------
 		public WebElement clickdatabaseclosebtn()
 		{
 			return driver.findElement(databaseclosebtn);

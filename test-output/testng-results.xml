@@ -1,135 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results skipped="0" failed="0" ignored="0" total="24" passed="24">
+<testng-results skipped="0" failed="0" ignored="0" total="27" passed="27">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="75834" started-at="2019-10-08T20:35:23Z" finished-at="2019-10-08T20:36:39Z">
+  <suite name="Default suite" duration-ms="68905" started-at="2019-10-22T16:37:58Z" finished-at="2019-10-22T16:39:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="75834" started-at="2019-10-08T20:35:23Z" finished-at="2019-10-08T20:36:39Z">
+    <test name="Default test" duration-ms="68905" started-at="2019-10-22T16:37:58Z" finished-at="2019-10-22T16:39:07Z">
       <class name="clo.DatabaseSettings">
-        <test-method status="PASS" signature="login()[pri:0, instance:clo.DatabaseSettings@3c41ed1d]" name="login" is-config="true" duration-ms="15253" started-at="2019-10-08T20:35:23Z" finished-at="2019-10-08T20:35:39Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:clo.DatabaseSettings@3c41ed1d]" name="login" is-config="true" duration-ms="16452" started-at="2019-10-22T16:37:58Z" finished-at="2019-10-22T16:38:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="dbAddCity()[pri:22, instance:clo.DatabaseSettings@3c41ed1d]" name="dbAddCity" duration-ms="5127" started-at="2019-10-08T20:35:39Z" finished-at="2019-10-08T20:35:44Z">
+        <test-method status="PASS" signature="dbAddCity()[pri:22, instance:clo.DatabaseSettings@3c41ed1d]" name="dbAddCity" duration-ms="4272" started-at="2019-10-22T16:38:14Z" finished-at="2019-10-22T16:38:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbAddCity -->
-        <test-method status="PASS" signature="dbEditCity()[pri:23, instance:clo.DatabaseSettings@3c41ed1d]" name="dbEditCity" duration-ms="1850" started-at="2019-10-08T20:35:44Z" finished-at="2019-10-08T20:35:46Z">
+        <test-method status="PASS" signature="dbEditCity()[pri:23, instance:clo.DatabaseSettings@3c41ed1d]" name="dbEditCity" duration-ms="1007" started-at="2019-10-22T16:38:18Z" finished-at="2019-10-22T16:38:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbEditCity -->
-        <test-method status="PASS" signature="dbDeleteCity()[pri:24, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteCity" duration-ms="2304" started-at="2019-10-08T20:35:46Z" finished-at="2019-10-08T20:35:48Z">
+        <test-method status="PASS" signature="dbDeleteCity()[pri:24, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteCity" duration-ms="1348" started-at="2019-10-22T16:38:19Z" finished-at="2019-10-22T16:38:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbDeleteCity -->
-        <test-method status="PASS" signature="dbaddEmployer()[pri:25, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddEmployer" duration-ms="4003" started-at="2019-10-08T20:35:48Z" finished-at="2019-10-08T20:35:52Z">
+        <test-method status="PASS" signature="dbaddEmployer()[pri:25, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddEmployer" duration-ms="4295" started-at="2019-10-22T16:38:21Z" finished-at="2019-10-22T16:38:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbaddEmployer -->
-        <test-method status="PASS" signature="dbeditEmployer()[pri:26, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditEmployer" duration-ms="3167" started-at="2019-10-08T20:35:52Z" finished-at="2019-10-08T20:35:55Z">
+        <test-method status="PASS" signature="dbeditEmployer()[pri:26, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditEmployer" duration-ms="2411" started-at="2019-10-22T16:38:25Z" finished-at="2019-10-22T16:38:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbeditEmployer -->
-        <test-method status="PASS" signature="dbDeleteEmployer()[pri:27, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteEmployer" duration-ms="2333" started-at="2019-10-08T20:35:55Z" finished-at="2019-10-08T20:35:57Z">
+        <test-method status="PASS" signature="dbDeleteEmployer()[pri:27, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteEmployer" duration-ms="1384" started-at="2019-10-22T16:38:27Z" finished-at="2019-10-22T16:38:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbDeleteEmployer -->
-        <test-method status="PASS" signature="dbaddCareProvider()[pri:28, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddCareProvider" duration-ms="3198" started-at="2019-10-08T20:35:57Z" finished-at="2019-10-08T20:36:01Z">
+        <test-method status="PASS" signature="dbaddCareProvider()[pri:28, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddCareProvider" duration-ms="3367" started-at="2019-10-22T16:38:29Z" finished-at="2019-10-22T16:38:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbaddCareProvider -->
-        <test-method status="PASS" signature="dbeditCareProvider()[pri:29, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditCareProvider" duration-ms="2289" started-at="2019-10-08T20:36:01Z" finished-at="2019-10-08T20:36:03Z">
+        <test-method status="PASS" signature="dbeditCareProvider()[pri:29, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditCareProvider" duration-ms="1229" started-at="2019-10-22T16:38:32Z" finished-at="2019-10-22T16:38:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbeditCareProvider -->
-        <test-method status="PASS" signature="dbDeleteCareProvider()[pri:30, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteCareProvider" duration-ms="2283" started-at="2019-10-08T20:36:03Z" finished-at="2019-10-08T20:36:05Z">
+        <test-method status="PASS" signature="dbDeleteCareProvider()[pri:30, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteCareProvider" duration-ms="1326" started-at="2019-10-22T16:38:33Z" finished-at="2019-10-22T16:38:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbDeleteCareProvider -->
-        <test-method status="PASS" signature="dbaddReferrals()[pri:31, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddReferrals" duration-ms="1860" started-at="2019-10-08T20:36:05Z" finished-at="2019-10-08T20:36:07Z">
+        <test-method status="PASS" signature="dbaddReferrals()[pri:31, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddReferrals" duration-ms="1901" started-at="2019-10-22T16:38:35Z" finished-at="2019-10-22T16:38:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbaddReferrals -->
-        <test-method status="PASS" signature="dbeditReferrals()[pri:32, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditReferrals" duration-ms="1553" started-at="2019-10-08T20:36:07Z" finished-at="2019-10-08T20:36:09Z">
+        <test-method status="PASS" signature="dbeditReferrals()[pri:32, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditReferrals" duration-ms="661" started-at="2019-10-22T16:38:37Z" finished-at="2019-10-22T16:38:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbeditReferrals -->
-        <test-method status="PASS" signature="dbDeleteReferrals()[pri:33, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteReferrals" duration-ms="2352" started-at="2019-10-08T20:36:09Z" finished-at="2019-10-08T20:36:11Z">
+        <test-method status="PASS" signature="dbDeleteReferrals()[pri:33, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteReferrals" duration-ms="1387" started-at="2019-10-22T16:38:37Z" finished-at="2019-10-22T16:38:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbDeleteReferrals -->
-        <test-method status="PASS" signature="dbaddDonee()[pri:34, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddDonee" duration-ms="2813" started-at="2019-10-08T20:36:11Z" finished-at="2019-10-08T20:36:14Z">
+        <test-method status="PASS" signature="dbaddDonee()[pri:34, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddDonee" duration-ms="2866" started-at="2019-10-22T16:38:39Z" finished-at="2019-10-22T16:38:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbaddDonee -->
-        <test-method status="PASS" signature="dbeditDonee()[pri:35, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditDonee" duration-ms="2527" started-at="2019-10-08T20:36:14Z" finished-at="2019-10-08T20:36:16Z">
+        <test-method status="PASS" signature="dbeditDonee()[pri:35, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditDonee" duration-ms="1693" started-at="2019-10-22T16:38:42Z" finished-at="2019-10-22T16:38:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbeditDonee -->
-        <test-method status="PASS" signature="dbDeleteDonee()[pri:36, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteDonee" duration-ms="2276" started-at="2019-10-08T20:36:16Z" finished-at="2019-10-08T20:36:19Z">
+        <test-method status="PASS" signature="dbDeleteDonee()[pri:36, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteDonee" duration-ms="1285" started-at="2019-10-22T16:38:43Z" finished-at="2019-10-22T16:38:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbDeleteDonee -->
-        <test-method status="PASS" signature="dbaddBankRTN()[pri:37, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddBankRTN" duration-ms="1722" started-at="2019-10-08T20:36:19Z" finished-at="2019-10-08T20:36:20Z">
+        <test-method status="PASS" signature="dbaddBankRTN()[pri:37, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddBankRTN" duration-ms="2049" started-at="2019-10-22T16:38:45Z" finished-at="2019-10-22T16:38:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbaddBankRTN -->
-        <test-method status="PASS" signature="dbeditBankRTN()[pri:38, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditBankRTN" duration-ms="1597" started-at="2019-10-08T20:36:20Z" finished-at="2019-10-08T20:36:22Z">
+        <test-method status="PASS" signature="dbeditBankRTN()[pri:38, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditBankRTN" duration-ms="1860" started-at="2019-10-22T16:38:47Z" finished-at="2019-10-22T16:38:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbeditBankRTN -->
-        <test-method status="PASS" signature="dbDeleteBankRTN()[pri:39, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteBankRTN" duration-ms="2235" started-at="2019-10-08T20:36:22Z" finished-at="2019-10-08T20:36:24Z">
+        <test-method status="PASS" signature="dbDeleteBankRTN()[pri:39, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteBankRTN" duration-ms="1329" started-at="2019-10-22T16:38:48Z" finished-at="2019-10-22T16:38:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbDeleteBankRTN -->
-        <test-method status="PASS" signature="dbaddOccupations()[pri:40, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddOccupations" duration-ms="1781" started-at="2019-10-08T20:36:24Z" finished-at="2019-10-08T20:36:26Z">
+        <test-method status="PASS" signature="dbaddOccupations()[pri:40, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddOccupations" duration-ms="1854" started-at="2019-10-22T16:38:50Z" finished-at="2019-10-22T16:38:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbaddOccupations -->
-        <test-method status="PASS" signature="dbeditOccupations()[pri:41, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditOccupations" duration-ms="1640" started-at="2019-10-08T20:36:26Z" finished-at="2019-10-08T20:36:28Z">
+        <test-method status="PASS" signature="dbeditOccupations()[pri:41, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditOccupations" duration-ms="790" started-at="2019-10-22T16:38:52Z" finished-at="2019-10-22T16:38:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbeditOccupations -->
-        <test-method status="PASS" signature="dbDeleteOccupations()[pri:42, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteOccupations" duration-ms="2253" started-at="2019-10-08T20:36:28Z" finished-at="2019-10-08T20:36:30Z">
+        <test-method status="PASS" signature="dbDeleteOccupations()[pri:42, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteOccupations" duration-ms="1330" started-at="2019-10-22T16:38:52Z" finished-at="2019-10-22T16:38:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbDeleteOccupations -->
-        <test-method status="PASS" signature="dbaddEducationalInstitute()[pri:43, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddEducationalInstitute" duration-ms="2736" started-at="2019-10-08T20:36:30Z" finished-at="2019-10-08T20:36:33Z">
+        <test-method status="PASS" signature="dbaddEducationalInstitute()[pri:43, instance:clo.DatabaseSettings@3c41ed1d]" name="dbaddEducationalInstitute" duration-ms="3130" started-at="2019-10-22T16:38:54Z" finished-at="2019-10-22T16:38:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbaddEducationalInstitute -->
-        <test-method status="PASS" signature="dbeditEducationalInstitute()[pri:44, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditEducationalInstitute" duration-ms="1831" started-at="2019-10-08T20:36:33Z" finished-at="2019-10-08T20:36:34Z">
+        <test-method status="PASS" signature="dbeditEducationalInstitute()[pri:44, instance:clo.DatabaseSettings@3c41ed1d]" name="dbeditEducationalInstitute" duration-ms="978" started-at="2019-10-22T16:38:57Z" finished-at="2019-10-22T16:38:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbeditEducationalInstitute -->
-        <test-method status="PASS" signature="dbDeleteEducationalInstitute()[pri:45, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteEducationalInstitute" duration-ms="4537" started-at="2019-10-08T20:36:34Z" finished-at="2019-10-08T20:36:39Z">
+        <test-method status="PASS" signature="dbDeleteEducationalInstitute()[pri:45, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteEducationalInstitute" duration-ms="1335" started-at="2019-10-22T16:38:58Z" finished-at="2019-10-22T16:38:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbDeleteEducationalInstitute -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:clo.DatabaseSettings@3c41ed1d]" name="teardown" is-config="true" duration-ms="261" started-at="2019-10-08T20:36:39Z" finished-at="2019-10-08T20:36:39Z">
+        <test-method status="PASS" signature="dbadduserstatuscodes()[pri:46, instance:clo.DatabaseSettings@3c41ed1d]" name="dbadduserstatuscodes" duration-ms="1871" started-at="2019-10-22T16:38:59Z" finished-at="2019-10-22T16:39:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbadduserstatuscodes -->
+        <test-method status="PASS" signature="dbEdituserstatuscodes()[pri:47, instance:clo.DatabaseSettings@3c41ed1d]" name="dbEdituserstatuscodes" duration-ms="1752" started-at="2019-10-22T16:39:01Z" finished-at="2019-10-22T16:39:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbEdituserstatuscodes -->
+        <test-method status="PASS" signature="dbDeleteUserStatusCodes()[pri:48, instance:clo.DatabaseSettings@3c41ed1d]" name="dbDeleteUserStatusCodes" duration-ms="1300" started-at="2019-10-22T16:39:03Z" finished-at="2019-10-22T16:39:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbDeleteUserStatusCodes -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:clo.DatabaseSettings@3c41ed1d]" name="teardown" is-config="true" duration-ms="2388" started-at="2019-10-22T16:39:04Z" finished-at="2019-10-22T16:39:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- clo.DatabaseSettings -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
-=======
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Suite2" duration-ms="19831" started-at="2019-09-18T21:52:44Z" finished-at="2019-09-18T21:53:04Z">
-    <groups>
-    </groups>
-    <test name="Test2" duration-ms="19831" started-at="2019-09-18T21:52:44Z" finished-at="2019-09-18T21:53:04Z">
-      <class name="clo.LoginPage">
-        <test-method status="PASS" signature="loginPositive()[pri:3, instance:clo.LoginPage@6025e1b6]" name="loginPositive" duration-ms="19784" started-at="2019-09-18T21:52:44Z" finished-at="2019-09-18T21:53:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginPositive -->
-      </class> <!-- clo.LoginPage -->
-    </test> <!-- Test2 -->
-  </suite> <!-- Suite2 -->
->>>>>>> a11bfaf363827ac26bda1a5cba183e89d86e138f
 </testng-results>

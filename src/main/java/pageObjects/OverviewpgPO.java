@@ -77,7 +77,7 @@ public class OverviewpgPO {
 	By notifdonebtn = By.id("btnHideMessageSentModal");//Done button in message successfully sent popup
 	By notifreceivedbtn = By.xpath("//span[text()= 'Received']");//Received button in Notifications
 	By notifreplybtn = By.xpath("//span[text()= 'Reply']");//Reply button in Notifications
-	By notifdeletebtn = By.id("btnDeleteMessage");//Delete message button
+	By notifdeletebtn = By.id("btnDeleteMessage2");//Delete message button
 	By notifdelmesgdialog = By.id("confirm-delete-message-desc");//Delete message popup
 	By notifdelmesgdialogyesbtn = By.id("btnYesConfirmDeleteMessage");//Yes button in del mesg popup
 	//-------------------------------------Checks----------------------------------------------
